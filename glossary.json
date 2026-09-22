@@ -1,0 +1,335 @@
+{
+  "total_terms": 29,
+  "glossary": [
+    {
+      "source_cn": "乔扎",
+      "target_en": "Joeza",
+      "bad_translations": [
+        "Josa",
+        "Qiaoza"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Story character"
+    },
+    {
+      "source_cn": "佩切涅格",
+      "target_en": "Pecheneg",
+      "bad_translations": [
+        "Pechenegi"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll (PKP)"
+    },
+    {
+      "source_cn": "六分仪",
+      "target_en": "Sextans",
+      "bad_translations": [
+        "Sextant"
+      ],
+      "exclusions": [
+        "黄铜"
+      ],
+      "category": "Characters",
+      "speaker_context": "Excludes brass instrument (黄铜)",
+      "notes": "Tactical Doll Sextans"
+    },
+    {
+      "source_cn": "六分仪小姐",
+      "target_en": "Miss Sextans",
+      "bad_translations": [
+        "Miss Sextant"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Doll Sextans address"
+    },
+    {
+      "source_cn": "桑朵莱希",
+      "target_en": "Centaureissi",
+      "bad_translations": [
+        "Sandoraixi",
+        "Sandorai"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll (G36)"
+    },
+    {
+      "source_cn": "海伦娜",
+      "target_en": "Helena",
+      "bad_translations": [
+        "Helene"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Third-generation Doll / story entity"
+    },
+    {
+      "source_cn": "科德韦尔",
+      "target_en": "Caldwell",
+      "bad_translations": [
+        "Coldwell"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Key story researcher"
+    },
+    {
+      "source_cn": "黑眼",
+      "target_en": "Black Eye",
+      "bad_translations": [
+        "Dark Eye"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Story character"
+    },
+    {
+      "source_cn": "黛烟",
+      "target_en": "Daiyan",
+      "bad_translations": [
+        "Dai Yan"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll (Type 95)"
+    },
+    {
+      "source_cn": "新苏联",
+      "target_en": "Neo-Soviet",
+      "bad_translations": [
+        "New Soviet"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Neo-Soviet Union"
+    },
+    {
+      "source_cn": "罗克萨特主义合众国联盟",
+      "target_en": "URNC",
+      "bad_translations": [
+        "Rossartrist Union"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Union of Rossartrist Nations Coalition"
+    },
+    {
+      "source_cn": "铁血",
+      "target_en": "Sangvis Ferri",
+      "bad_translations": [
+        "Iron Blood",
+        "Iron-Blood",
+        "IronBlood"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Sangvis Ferri faction"
+    },
+    {
+      "source_cn": "铁血工造",
+      "target_en": "Sangvis Ferri",
+      "bad_translations": [
+        "Iron Blood Manufacturing",
+        "Iron Blood Industry",
+        "Iron Blood"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Sangvis Ferri Industrial Manufacturing"
+    },
+    {
+      "source_cn": "主人",
+      "target_en": "Master",
+      "bad_translations": [
+        "Owner",
+        "Host"
+      ],
+      "exclusions": [],
+      "category": "Honorific",
+      "speaker_context": "Centaureissi / Maids",
+      "notes": "Maid doll address towards the Commander"
+    },
+    {
+      "source_cn": "指挥官",
+      "target_en": "Commander",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Honorific",
+      "speaker_context": "Dolls addressing player",
+      "notes": "Standard address for the protagonist player"
+    },
+    {
+      "source_cn": "阁下",
+      "target_en": "Your Excellency",
+      "bad_translations": [
+        "sir",
+        "Sir",
+        "Milord"
+      ],
+      "exclusions": [
+        "总编"
+      ],
+      "category": "Honorific",
+      "speaker_context": "Sextans / Formal address",
+      "notes": "Formal aristocratic address used towards the Commander"
+    },
+    {
+      "source_cn": "净化区",
+      "target_en": "Purified Zone",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Locations",
+      "speaker_context": "Any",
+      "notes": "Restored zone"
+    },
+    {
+      "source_cn": "希岸空间",
+      "target_en": "Nirvana space",
+      "bad_translations": [
+        "Xi'an space",
+        "Xian space",
+        "Xian Space"
+      ],
+      "exclusions": [],
+      "category": "Locations",
+      "speaker_context": "Any",
+      "notes": "Virtual realm created by Relic tech"
+    },
+    {
+      "source_cn": "红区",
+      "target_en": "Red Zone",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Locations",
+      "speaker_context": "Any",
+      "notes": "Severe contamination zone"
+    },
+    {
+      "source_cn": "绿区",
+      "target_en": "Green Zone",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Locations",
+      "speaker_context": "Any",
+      "notes": "Habitable safe zone"
+    },
+    {
+      "source_cn": "黄区",
+      "target_en": "Yellow Zone",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Locations",
+      "speaker_context": "Any",
+      "notes": "Contamination zone"
+    },
+    {
+      "source_cn": "伯介姆",
+      "target_en": "Boojum",
+      "bad_translations": [
+        "Bojem",
+        "Bergam"
+      ],
+      "exclusions": [],
+      "category": "Lore / Entity",
+      "speaker_context": "Any",
+      "notes": "Extraterrestrial lifeform / anomaly"
+    },
+    {
+      "source_cn": "星渊",
+      "target_en": "Ateraxis",
+      "bad_translations": [
+        "Star Abyss-a",
+        "Star Abyss",
+        "Astral Abyss"
+      ],
+      "exclusions": [],
+      "category": "Lore / Entity",
+      "speaker_context": "Any",
+      "notes": "Avatar of Boojum (Ateraxis)"
+    },
+    {
+      "source_cn": "塌陷液",
+      "target_en": "Collapse Fluid",
+      "bad_translations": [
+        "Collapse Liquid"
+      ],
+      "exclusions": [],
+      "category": "Lore / Tech",
+      "speaker_context": "Any",
+      "notes": "Relic energy substance"
+    },
+    {
+      "source_cn": "塌陷辐射",
+      "target_en": "Collapse Radiation",
+      "bad_translations": [
+        "Collapse rays"
+      ],
+      "exclusions": [],
+      "category": "Lore / Tech",
+      "speaker_context": "Any",
+      "notes": "Radiation caused by Collapse Fluid"
+    },
+    {
+      "source_cn": "心智云图",
+      "target_en": "Neural Cloud",
+      "bad_translations": [
+        "Mental Cloud"
+      ],
+      "exclusions": [],
+      "category": "Lore / Tech",
+      "speaker_context": "Any",
+      "notes": "Doll consciousness backup/storage system"
+    },
+    {
+      "source_cn": "烙印系统",
+      "target_en": "Imprint System",
+      "bad_translations": [
+        "Branding System"
+      ],
+      "exclusions": [],
+      "category": "Lore / Tech",
+      "speaker_context": "Any",
+      "notes": "Gun-Doll synchronization link"
+    },
+    {
+      "source_cn": "艾莫",
+      "target_en": "Elmo",
+      "bad_translations": [
+        "Emmo",
+        "Aimo"
+      ],
+      "exclusions": [],
+      "category": "Vehicles & Base",
+      "speaker_context": "Any",
+      "notes": "Base vehicle name"
+    },
+    {
+      "source_cn": "艾莫号",
+      "target_en": "the Elmo",
+      "bad_translations": [
+        "Emmo",
+        "Aimo",
+        "Aimo ship"
+      ],
+      "exclusions": [],
+      "category": "Vehicles & Base",
+      "speaker_context": "Any",
+      "notes": "Commander mobile command vehicle / base"
+    }
+  ]
+}

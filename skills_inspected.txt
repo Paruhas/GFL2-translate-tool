@@ -1,0 +1,75 @@
+=== [237] ===
+P0: 消耗<color=#f26c1c>1点</color>导染指数可主动使用该技能，选取<color=#3487e0>{0}</color>或拥有<color=#3487e0>{2}</color>的目标<color=#f26c1c>周围半径2格内</color>的空地格，落至该地格上，并获得<color=#3487e0>{3}</color>。每回合至多使用<color=#f26c1c>3次</color>。
+   Tags: ['<color=#f26c1c>1点</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{2}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#3487e0>{3}</color>', '<color=#f26c1c>3次</color>']
+P1: 战斗开始时，对全场范围内最近的<color=#f26c1c>10个</color>敌方非首领单位施加<color=#3487e0>{4}</color>，持续<color=#f26c1c>1个大回合</color>，并对最近的<color=#f26c1c>1个</color>敌方机械类非首领单位施加<color=#3487e0>{2}</color>。自身免疫伤害与固定伤害，持续至该效果释放结束。
+   Tags: ['<color=#f26c1c>10个</color>', '<color=#3487e0>{4}</color>', '<color=#f26c1c>1个大回合</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{2}</color>']
+P2: 战斗开始时，自身获得<color=#3487e0>{1}</color>，场上每有<color=#f26c1c>1个</color>拥有<color=#3487e0>{1}</color>的友方人形或者未拥有<color=#3487e0>{1}</color>的浊刻类友方人形，自身造成的伤害提高<color=#f26c1c>16%</color>，至多提高<color=#f26c1c>80%</color>；场上每有<color=#f26c1c>1个</color>拥有<color=#3487e0>{1}</color>的友方人形，所有拥有<color=#3487e0>{1}</color>的友方人形获得<color=#f26c1c>1层</color><color=#3487e0>{5}</color>。大回合结束时，获得<color=#f26c1c>3点</color>导染指数。
+   Tags: ['<color=#3487e0>{1}</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#f26c1c>16%</color>', '<color=#f26c1c>80%</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#f26c1c>1层</color>', '<color=#3487e0>{5}</color>', '<color=#f26c1c>3点</color>']
+P3: 使用主动技能<color=#3487e0>血光映射</color>、制胜技能<color=#3487e0>绝域清场</color>前或者行动结束时，若自身<color=#f26c1c>周围半径8格内</color>存在<color=#3487e0>{0}</color>，自身获得<color=#f26c1c>1层</color><color=#3487e0>{6}</color>，每个大回合至多触发<color=#f26c1c>1次</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>1层</color>', '<color=#3487e0>{6}</color>', '<color=#f26c1c>1次</color>']
+P4: 若自身<color=#f26c1c>周围半径8格内</color>有敌方目标对友方单位造成伤害，则进行<color=#3487e0>{7}</color>，对其及其<color=#f26c1c>周围半径2格内</color>的所有敌方目标造成<color=#f26c1c>80%</color>攻击力的无视掩体的范围<color=#2caadb>浊刻伤害</color>和<color=#f26c1c>2点</color>稳态伤害；若目标未处于<color=#3487e0>{0}</color><color=#f26c1c>周围半径8格内</color>，则<color=#3487e0>{0}</color>不会进行<color=#3487e0>{7}</color>，每个大回合至多触发<color=#f26c1c>1次</color>。
+   Tags: ['<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#f26c1c>80%</color>', '<color=#2caadb>浊刻伤害</color>', '<color=#f26c1c>2点</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>1次</color>']
+P5: 使用主动技能<color=#3487e0>血光映射</color>和制胜技能<color=#3487e0>绝域清场</color>前，在自身和<color=#3487e0>{0}</color><color=#f26c1c>周围半径4格内</color>产生<color=#3487e0>{8}</color>地格，持续<color=#f26c1c>2回合</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径4格内</color>', '<color=#3487e0>{8}</color>', '<color=#f26c1c>2回合</color>']
+P6: 每获得<color=#f26c1c>1层</color><color=#3487e0>{9}</color>，自身暴击伤害提高<color=#f26c1c>4%</color>，至多提高<color=#f26c1c>40%</color>。
+   Tags: ['<color=#f26c1c>1层</color>', '<color=#3487e0>{9}</color>', '<color=#f26c1c>4%</color>', '<color=#f26c1c>40%</color>']
+=== [238] ===
+P0: 消耗<color=#f26c1c>1点</color>导染指数可主动使用该技能，选取<color=#3487e0>{0}</color>或拥有<color=#3487e0>{2}</color>的目标<color=#f26c1c>周围半径2格内</color>的空地格，落至该地格上，并获得<color=#3487e0>{3}</color>。每回合至多使用<color=#f26c1c>3次</color>。
+   Tags: ['<color=#f26c1c>1点</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{2}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#3487e0>{3}</color>', '<color=#f26c1c>3次</color>']
+P1: 战斗开始时，对全场范围内最近的<color=#f26c1c>5个</color>敌方非首领单位施加<color=#3487e0>{4}</color>，持续<color=#f26c1c>1个大回合</color>，并对最近的<color=#f26c1c>1个</color>敌方机械类非首领单位施加<color=#3487e0>{2}</color>。自身免疫伤害与固定伤害，持续至该效果释放结束。
+   Tags: ['<color=#f26c1c>5个</color>', '<color=#3487e0>{4}</color>', '<color=#f26c1c>1个大回合</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{2}</color>']
+P2: 战斗开始时，自身获得<color=#3487e0>{1}</color>，场上每有<color=#f26c1c>1个</color>拥有<color=#3487e0>{1}</color>的友方人形或者未拥有<color=#3487e0>{1}</color>的浊刻类友方人形，自身造成的伤害提高<color=#f26c1c>16%</color>，至多提高<color=#f26c1c>80%</color>；场上每有<color=#f26c1c>1个</color>拥有<color=#3487e0>{1}</color>的友方人形，所有拥有<color=#3487e0>{1}</color>的友方人形获得<color=#f26c1c>1层</color><color=#3487e0>{5}</color>。大回合结束时，获得<color=#f26c1c>3点</color>导染指数。
+   Tags: ['<color=#3487e0>{1}</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#f26c1c>16%</color>', '<color=#f26c1c>80%</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#f26c1c>1层</color>', '<color=#3487e0>{5}</color>', '<color=#f26c1c>3点</color>']
+P3: 使用主动技能<color=#3487e0>血光映射</color>、制胜技能<color=#3487e0>绝域清场</color>前或者行动结束时，若自身<color=#f26c1c>周围半径8格内</color>存在<color=#3487e0>{0}</color>，自身获得<color=#f26c1c>1层</color><color=#3487e0>{6}</color>，每个大回合至多触发<color=#f26c1c>1次</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>1层</color>', '<color=#3487e0>{6}</color>', '<color=#f26c1c>1次</color>']
+P4: 若自身<color=#f26c1c>周围半径8格内</color>有敌方目标对友方单位造成伤害，则进行<color=#3487e0>{7}</color>，对其及其<color=#f26c1c>周围半径2格内</color>的所有敌方目标造成<color=#f26c1c>80%</color>攻击力的无视掩体的范围<color=#2caadb>浊刻伤害</color>和<color=#f26c1c>2点</color>稳态伤害；若目标未处于<color=#3487e0>{0}</color><color=#f26c1c>周围半径8格内</color>，则<color=#3487e0>{0}</color>不会进行<color=#3487e0>{7}</color>，每个大回合至多触发<color=#f26c1c>1次</color>。
+   Tags: ['<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#f26c1c>80%</color>', '<color=#2caadb>浊刻伤害</color>', '<color=#f26c1c>2点</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>1次</color>']
+P5: 使用主动技能<color=#3487e0>血光映射</color>和制胜技能<color=#3487e0>绝域清场</color>前，在自身和<color=#3487e0>{0}</color><color=#f26c1c>周围半径4格内</color>产生<color=#3487e0>{8}</color>地格，持续<color=#f26c1c>2回合</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径4格内</color>', '<color=#3487e0>{8}</color>', '<color=#f26c1c>2回合</color>']
+P6: 每获得<color=#f26c1c>1层</color><color=#3487e0>{9}</color>，自身暴击伤害提高<color=#f26c1c>4%</color>，至多提高<color=#f26c1c>40%</color>。
+   Tags: ['<color=#f26c1c>1层</color>', '<color=#3487e0>{9}</color>', '<color=#f26c1c>4%</color>', '<color=#f26c1c>40%</color>']
+=== [239] ===
+P0: 消耗导染指数可主动使用该技能，选取<color=#3487e0>{0}</color>或拥有<color=#3487e0>{2}</color>的目标<color=#f26c1c>周围半径2格内</color>的空地格，落至该地格上，并获得<color=#3487e0>{3}</color>。
+   Tags: ['<color=#3487e0>{0}</color>', '<color=#3487e0>{2}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#3487e0>{3}</color>']
+P1: 战斗开始时，对全场范围内最近的<color=#f26c1c>10个</color>敌方非首领单位施加<color=#3487e0>{4}</color>，并对最近的<color=#f26c1c>1个</color>敌方机械类非首领单位施加<color=#3487e0>{2}</color>。自身免疫伤害与固定伤害，持续至该效果释放结束。
+   Tags: ['<color=#f26c1c>10个</color>', '<color=#3487e0>{4}</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{2}</color>']
+P2: 战斗开始时，自身获得<color=#3487e0>{1}</color>，根据场上拥有<color=#3487e0>{1}</color>的友方人形或者未拥有<color=#3487e0>{1}</color>的浊刻类友方人形的数量，自身造成的伤害提高，根据场上拥有<color=#3487e0>{1}</color>的友方人形的数量，所有拥有<color=#3487e0>{1}</color>的友方人形获得<color=#3487e0>{5}</color>。大回合结束时，获得导染指数。
+   Tags: ['<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{5}</color>']
+P3: 使用主动技能<color=#3487e0>血光映射</color>、制胜技能<color=#3487e0>绝域清场</color>前或者行动结束时，若自身<color=#f26c1c>周围半径8格内</color>存在<color=#3487e0>{0}</color>，自身获得<color=#3487e0>{6}</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{6}</color>']
+P4: 若自身<color=#f26c1c>周围半径8格内</color>有敌方目标对友方单位造成伤害，则进行<color=#3487e0>{7}</color>，对其及其<color=#f26c1c>周围半径2格内</color>的所有敌方目标造成无视掩体的范围<color=#2caadb>浊刻伤害</color>和稳态伤害；若目标未处于<color=#3487e0>{0}</color><color=#f26c1c>周围半径8格内</color>，则<color=#3487e0>{0}</color>不会进行<color=#3487e0>{7}</color>。
+   Tags: ['<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#2caadb>浊刻伤害</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{7}</color>']
+P5: 使用主动技能<color=#3487e0>血光映射</color>和制胜技能<color=#3487e0>绝域清场</color>前，在自身和<color=#3487e0>{0}</color><color=#f26c1c>周围半径4格内</color>产生<color=#3487e0>{8}</color>地格。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径4格内</color>', '<color=#3487e0>{8}</color>']
+P6: 根据获得的<color=#3487e0>{9}</color>层数，自身暴击伤害提高。
+   Tags: ['<color=#3487e0>{9}</color>']
+=== [240] ===
+P0: 消耗导染指数可主动使用该技能，选取<color=#3487e0>{0}</color>或拥有<color=#3487e0>{2}</color>的目标<color=#f26c1c>周围半径2格内</color>的空地格，落至该地格上，并获得<color=#3487e0>{3}</color>。
+   Tags: ['<color=#3487e0>{0}</color>', '<color=#3487e0>{2}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#3487e0>{3}</color>']
+P1: 战斗开始时，对全场范围内最近的<color=#f26c1c>10个</color>敌方非首领单位施加<color=#3487e0>{4}</color>，并对最近的<color=#f26c1c>1个</color>敌方机械类非首领单位施加<color=#3487e0>{2}</color>。自身免疫伤害与固定伤害，持续至该效果释放结束。
+   Tags: ['<color=#f26c1c>10个</color>', '<color=#3487e0>{4}</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{2}</color>']
+P2: 战斗开始时，自身获得<color=#3487e0>{1}</color>，根据场上拥有<color=#3487e0>{1}</color>的友方人形或者未拥有<color=#3487e0>{1}</color>的浊刻类友方人形的数量，自身造成的伤害提高，根据场上拥有<color=#3487e0>{1}</color>的友方人形的数量，所有拥有<color=#3487e0>{1}</color>的友方人形获得<color=#3487e0>{5}</color>。大回合结束时，获得导染指数。
+   Tags: ['<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{5}</color>']
+P3: 使用主动技能<color=#3487e0>血光映射</color>、制胜技能<color=#3487e0>绝域清场</color>前或者行动结束时，若自身<color=#f26c1c>周围半径8格内</color>存在<color=#3487e0>{0}</color>，自身获得<color=#3487e0>{6}</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{6}</color>']
+P4: 若自身<color=#f26c1c>周围半径8格内</color>有敌方目标对友方单位造成伤害，则进行<color=#3487e0>{7}</color>，对其及其<color=#f26c1c>周围半径2格内</color>的所有敌方目标造成无视掩体的范围<color=#2caadb>浊刻伤害</color>和稳态伤害；若目标未处于<color=#3487e0>{0}</color><color=#f26c1c>周围半径8格内</color>，则<color=#3487e0>{0}</color>不会进行<color=#3487e0>{7}</color>。
+   Tags: ['<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#2caadb>浊刻伤害</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{7}</color>']
+P5: 使用主动技能<color=#3487e0>血光映射</color>和制胜技能<color=#3487e0>绝域清场</color>前，在自身和<color=#3487e0>{0}</color><color=#f26c1c>周围半径4格内</color>产生<color=#3487e0>{8}</color>地格，
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径4格内</color>', '<color=#3487e0>{8}</color>']
+P6: 根据获得的<color=#3487e0>{9}</color>层数，自身暴击伤害提高。
+   Tags: ['<color=#3487e0>{9}</color>']
+=== [241] ===
+P0: 消耗导染指数可主动使用该技能，选取<color=#3487e0>{0}</color>或拥有<color=#3487e0>{2}</color>的目标<color=#f26c1c>周围半径2格内</color>的空地格，落至该地格上，并获得<color=#3487e0>{3}</color>。
+   Tags: ['<color=#3487e0>{0}</color>', '<color=#3487e0>{2}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#3487e0>{3}</color>']
+P1: 战斗开始时，对全场范围内最近的<color=#f26c1c>5个</color>敌方非首领单位施加<color=#3487e0>{4}</color>，并对最近的<color=#f26c1c>1个</color>敌方机械类非首领单位施加<color=#3487e0>{2}</color>。自身免疫伤害与固定伤害，持续至该效果释放结束。
+   Tags: ['<color=#f26c1c>5个</color>', '<color=#3487e0>{4}</color>', '<color=#f26c1c>1个</color>', '<color=#3487e0>{2}</color>']
+P2: 战斗开始时，自身获得<color=#3487e0>{1}</color>，根据场上拥有<color=#3487e0>{1}</color>的友方人形或者未拥有<color=#3487e0>{1}</color>的浊刻类友方人形的数量，自身造成的伤害提高，根据场上拥有<color=#3487e0>{1}</color>的友方人形的数量，所有拥有<color=#3487e0>{1}</color>的友方人形获得<color=#3487e0>{5}</color>。大回合结束时，获得导染指数。
+   Tags: ['<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{1}</color>', '<color=#3487e0>{5}</color>']
+P3: 使用主动技能<color=#3487e0>血光映射</color>、制胜技能<color=#3487e0>绝域清场</color>前或者行动结束时，若自身<color=#f26c1c>周围半径8格内</color>存在<color=#3487e0>{0}</color>，自身获得<color=#3487e0>{6}</color>。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{6}</color>']
+P4: 若自身<color=#f26c1c>周围半径8格内</color>有敌方目标对友方单位造成伤害，则进行<color=#3487e0>{7}</color>，对其及其<color=#f26c1c>周围半径2格内</color>的所有敌方目标造成无视掩体的范围<color=#2caadb>浊刻伤害</color>和稳态伤害；若目标未处于<color=#3487e0>{0}</color><color=#f26c1c>周围半径8格内</color>，则<color=#3487e0>{0}</color>不会进行<color=#3487e0>{7}</color>。
+   Tags: ['<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{7}</color>', '<color=#f26c1c>周围半径2格内</color>', '<color=#2caadb>浊刻伤害</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径8格内</color>', '<color=#3487e0>{0}</color>', '<color=#3487e0>{7}</color>']
+P5: 使用主动技能<color=#3487e0>血光映射</color>和制胜技能<color=#3487e0>绝域清场</color>前，在自身和<color=#3487e0>{0}</color><color=#f26c1c>周围半径4格内</color>产生<color=#3487e0>{8}</color>地格。
+   Tags: ['<color=#3487e0>血光映射</color>', '<color=#3487e0>绝域清场</color>', '<color=#3487e0>{0}</color>', '<color=#f26c1c>周围半径4格内</color>', '<color=#3487e0>{8}</color>']
+P6: 根据获得的<color=#3487e0>{9}</color>层数，自身暴击伤害提高。
+   Tags: ['<color=#3487e0>{9}</color>']

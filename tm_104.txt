@@ -1,0 +1,17 @@
+<size=22><b>[Access Instructions]</b></size>
+<color=#32434a><b>Reunion Procurement·Arms</b> is a limited time weapon access</color>.
+<color=#f26c1c>※During the event, limited edition elite weapons "Chongxian", "Maid Code", "Young Lion", "Leaping Tiger", "Bitter Caramel", "Liuyu Baiying", "Unspoken Mission", "Poetry of Praise", "Leaving No Lines", "Scylla", "Daydream", "Revelation of Death" "Language", "Wild Elf", "Aglaia", "Faith Thorn Light", "Ermenita", "Light Chasing", "Streaming Fireworks", "Dream Protector Silver Wings", "Sly Fox", "Wanderer's Hymn", "Sun Vision", "Iaso", "thorn Thorn Law" can only be obtained in the [Reunion Procurement·Arms] event.
+
+After the event, the elite weapons "Chongxian", "Maid Code", "Lion Cub", "Leaping Tiger", "Bitter Caramel", "Liuyu Baiying", "Unspoken Mission", "Poetry of Praise", "Leave No Line", "Scylla", "Daydreaming", "Whispers of Mourning", "Lin Ye" "Elf", "Aglaia", "Faith Thornlight", "Ermenita", "Light Chaser", "Streaming Fireworks", "Dream Guard Silver Wings", "Sly Fox", "Wanderer's Hymn", "Sun Vision", "Iaso", "thornthorn law" will not be included in the [regular purchase]. </color>
+
+-Elite weapon probability description
+In this type of visit, the basic probability of elite weapons is <color=#EDA51C>[VAL1]</color>, and the comprehensive probability of elite weapons (including guaranteed) is <color=#EDA51C>[VAL2]</color>.
+
+- Description of standard humanoid and weapon probability
+In this type of visit, the basic probability of standard weapons is <color=#AC65E8>[VAL3]</color>, and the comprehensive probability of standard weapons (including guaranteed) is <color=#AC65E8>[VAL4]</color>.
+
+-Access detailed rules
+1. In this type of visit, you will definitely get a standard or elite weapon every 10 visits.
+2. In this type of visit, if you do not obtain an elite weapon for 50 consecutive times, the probability of obtaining an elite weapon will increase, and you will definitely obtain an elite weapon every 70 visits. When you obtain an elite weapon at any time, the count will be reset, and the probability of obtaining an elite weapon will return to the basic probability. If the elite weapon obtained during this visit is not an elite weapon with an increased probability in this period, the elite weapon obtained next time must be an elite weapon with an increased probability in this period.
+3. The guaranteed count for this type of access is not cumulative and is independent of the guaranteed count for other types of access and does not affect each other.
+4. In this type of visit, every time you get an old weapon, you will get 2 additional extraction vouchers; every time you get a standard humanoid or weapon, you will get an additional 12 redundant fragments; every time you get an elite humanoid or weapon, you will get an additional 60 redundant fragments.
