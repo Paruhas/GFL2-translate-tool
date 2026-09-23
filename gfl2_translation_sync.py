@@ -61,10 +61,20 @@ class TranslationMemory:
                     target_en TEXT NOT NULL,
                     frequency INTEGER DEFAULT 1,
                     source_type TEXT DEFAULT 'matched',
-                    updated_at TEXT
+                    updated_at TEXT,
+                    is_verified INTEGER DEFAULT 1,
+                    created_at TEXT
                 );
             """)
             conn.execute("CREATE INDEX IF NOT EXISTS idx_source_cn ON translations (source_cn);")
+            cols = [c[1] for c in conn.execute("PRAGMA table_info(translations);").fetchall()]
+            if "is_verified" not in cols:
+                conn.execute("ALTER TABLE translations ADD COLUMN is_verified INTEGER DEFAULT 1;")
+            if "created_at" not in cols:
+                conn.execute("ALTER TABLE translations ADD COLUMN created_at TEXT;")
+                conn.execute("UPDATE translations SET created_at = COALESCE(updated_at, datetime('now')) WHERE created_at IS NULL;")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_is_verified ON translations (is_verified);")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_translations_created_at ON translations (created_at);")
             conn.commit()
 
     def count(self) -> int:
@@ -88,26 +98,46 @@ class TranslationMemory:
             cur.execute("SELECT source_cn, target_en FROM translations;")
             return dict(cur.fetchall())
 
-    def upsert_bulk(self, entries: list[tuple[str, str, int, str]]) -> int:
+    def upsert_bulk(self, entries: list[tuple]) -> int:
         """Batch insert or update translations.
 
-        entries format: list of (source_cn, target_en, frequency, source_type)
+        entries format: list of (source_cn, target_en, frequency, source_type[, is_verified[, created_at]])
         """
         if not entries:
             return 0
         now_str = datetime.now().isoformat()
+        formatted = []
+        for item in entries:
+            if len(item) >= 6:
+                cn, en, freq, stype, verified, created = item[0], item[1], item[2], item[3], item[4], item[5]
+            elif len(item) == 5:
+                cn, en, freq, stype, verified = item[0], item[1], item[2], item[3], item[4]
+                created = now_str
+            elif len(item) == 4:
+                cn, en, freq, stype = item
+                verified = 1
+                created = now_str
+            else:
+                cn, en = item[0], item[1]
+                freq = item[2] if len(item) > 2 else 1
+                stype = item[3] if len(item) > 3 else "matched"
+                verified = 1
+                created = now_str
+            formatted.append((cn, en, freq, stype, now_str, verified, created))
+
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.executemany("""
-                INSERT INTO translations (source_cn, target_en, frequency, source_type, updated_at)
-                VALUES (?, ?, ?, ?, ?)
+                INSERT INTO translations (source_cn, target_en, frequency, source_type, updated_at, is_verified, created_at)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(source_cn) DO UPDATE SET
                     target_en = excluded.target_en,
                     frequency = translations.frequency + excluded.frequency,
                     source_type = excluded.source_type,
-                    updated_at = excluded.updated_at
+                    updated_at = excluded.updated_at,
+                    is_verified = excluded.is_verified
                 WHERE excluded.source_type != 'auto' OR translations.source_type = 'auto';
-            """, [(cn, en, freq, stype, now_str) for (cn, en, freq, stype) in entries])
+            """, formatted)
             conn.commit()
             return len(entries)
 
@@ -451,10 +481,12 @@ def import_translated_file(
     translated_input: Path,
     db_path: Path,
     target_en_json: Path | None = None,
+    apply_glossary_rules: bool = True,
 ) -> int:
     """Imports an external or manually translated JSON file or folder of files into the database
-
     and updates translations_eng.json in place.
+    
+    Applies Lore Glossary rules to newly imported strings before saving to database.
     """
     print(f"\n--- Importing Translations ---")
     print(f"Source   : {translated_input}")
@@ -472,7 +504,7 @@ def import_translated_file(
     else:
         raise FileNotFoundError(f"Input path not found: {translated_input}")
 
-    pairs: list[tuple[str, str, int, str]] = []
+    raw_pairs: list[tuple[str, str]] = []
     seen_cn: set[str] = set()
 
     for fpath in files:
@@ -496,26 +528,67 @@ def import_translated_file(
                 continue
             if isinstance(en, str) and cn and en.strip() and cn != en:
                 if cn not in seen_cn:
-                    pairs.append((cn, en.strip(), 1, "manual"))
+                    raw_pairs.append((cn, en.strip()))
                     seen_cn.add(cn)
 
-    if not pairs:
+    if not raw_pairs:
         print("No valid translated pairs found (English values must not be empty or identical to Chinese).")
         return 0
 
+    # Apply Lore Glossary rules at ingestion gate
+    rules = []
+    if apply_glossary_rules:
+        try:
+            import apply_glossary as ag
+            rules = ag.load_active_rules(db_path)
+        except Exception as exc:
+            print(f"  [Warning] Could not load lore glossary rules: {exc}")
+
+    glossary_fixes = 0
+    pairs: list[tuple[str, str, int, str, int]] = []
+    for cn, en in raw_pairs:
+        clean_en = en
+        if rules:
+            try:
+                import apply_glossary as ag
+                clean_en, applied = ag.apply_glossary_to_text(en, cn, rules)
+                if applied:
+                    glossary_fixes += len(applied)
+            except Exception:
+                pass
+        pairs.append((cn, clean_en, 1, "manual", 1))  # is_verified = 1
+
+    if glossary_fixes > 0:
+        print(f"✓ [Lore Glossary] Auto-corrected {glossary_fixes} terms according to canon lore.")
+
     db = TranslationMemory(db_path)
     db.upsert_bulk(pairs)
-    print(f"[Success] Imported {len(pairs):,} unique translations into {db_path.name}.")
+    print(f"[Success] Imported {len(pairs):,} unique verified translations into {db_path.name}.")
 
     if target_en_json and target_en_json.is_file():
         print(f"Updating {target_en_json.name} with newly imported translations...")
-        mapping = {cn: en for cn, en, _, _ in pairs}
+        mapping = {cn: en for cn, en, _, _, _ in pairs}
         with target_en_json.open("r", encoding="utf-8") as f:
             en_doc = json.load(f)
         texts = en_doc.get("texts", {})
+
+        cn_file = target_en_json.parent / "translations.json"
+        cn_lookup = {}
+        if cn_file.exists():
+            try:
+                with cn_file.open("r", encoding="utf-8") as cf:
+                    cn_data = json.load(cf)
+                    cn_lookup = cn_data.get("texts", cn_data.get("translations", cn_data))
+            except Exception:
+                pass
+
         updated = 0
         for k, v in texts.items():
-            if v in mapping:
+            cn_src = cn_lookup.get(k, v)
+            if cn_src in mapping:
+                texts[k] = mapping[cn_src]
+                updated += 1
+            elif v in mapping:
                 texts[k] = mapping[v]
                 updated += 1
         with target_en_json.open("w", encoding="utf-8", newline="\n") as f:

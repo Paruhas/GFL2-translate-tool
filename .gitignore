@@ -6,7 +6,8 @@
 *.bytes
 
 # Ignore local SQLite translation memory databases
-translation_memory.db*
+*.db*
+*.sqlite*
 
 # Ignore temporary zip archives
 *.zip

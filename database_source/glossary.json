@@ -1,5 +1,5 @@
 {
-  "total_terms": 190,
+  "total_terms": 192,
   "glossary": [
     {
       "source_cn": "乌尔丽德",
@@ -10,7 +10,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:35.668183",
+      "updated_at": "2026-09-23T18:08:35.668183"
     },
     {
       "source_cn": "乔扎",
@@ -22,7 +24,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Story character"
+      "notes": "Story character",
+      "created_at": "2026-09-23T18:08:35.669318",
+      "updated_at": "2026-09-23T18:08:35.669318"
     },
     {
       "source_cn": "人形OTs-14",
@@ -31,7 +35,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.675042",
+      "updated_at": "2026-09-23T18:08:35.675042"
     },
     {
       "source_cn": "人形乌尔丽德",
@@ -40,7 +46,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.680169",
+      "updated_at": "2026-09-23T18:08:35.680169"
     },
     {
       "source_cn": "人形代理人",
@@ -49,7 +57,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.685370",
+      "updated_at": "2026-09-23T18:08:35.685370"
     },
     {
       "source_cn": "人形伊格蕾塔",
@@ -58,7 +68,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.690283",
+      "updated_at": "2026-09-23T18:08:35.690283"
     },
     {
       "source_cn": "人形佩莉",
@@ -67,7 +79,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.695509",
+      "updated_at": "2026-09-23T18:08:35.695509"
     },
     {
       "source_cn": "人形佩里缇亚",
@@ -76,7 +90,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.701130",
+      "updated_at": "2026-09-23T18:08:35.701130"
     },
     {
       "source_cn": "人形克罗丽科",
@@ -85,7 +101,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.706531",
+      "updated_at": "2026-09-23T18:08:35.706531"
     },
     {
       "source_cn": "人形克莱妲",
@@ -94,7 +112,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.712041",
+      "updated_at": "2026-09-23T18:08:35.712041"
     },
     {
       "source_cn": "人形六分仪",
@@ -103,7 +123,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.717550",
+      "updated_at": "2026-09-23T18:08:35.717550"
     },
     {
       "source_cn": "人形刘易斯",
@@ -112,7 +134,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.723293",
+      "updated_at": "2026-09-23T18:08:35.723293"
     },
     {
       "source_cn": "人形刘莳",
@@ -121,7 +145,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.729110",
+      "updated_at": "2026-09-23T18:08:35.729110"
     },
     {
       "source_cn": "人形可露凯",
@@ -130,7 +156,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.733839",
+      "updated_at": "2026-09-23T18:08:35.733839"
     },
     {
       "source_cn": "人形哈卜茜",
@@ -139,7 +167,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.739454",
+      "updated_at": "2026-09-23T18:08:35.739454"
     },
     {
       "source_cn": "人形埃芙",
@@ -148,7 +178,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.745678",
+      "updated_at": "2026-09-23T18:08:35.745678"
     },
     {
       "source_cn": "人形塞布丽娜",
@@ -157,7 +189,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.750133",
+      "updated_at": "2026-09-23T18:08:35.750133"
     },
     {
       "source_cn": "人形夏克里",
@@ -166,7 +200,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.755981",
+      "updated_at": "2026-09-23T18:08:35.755981"
     },
     {
       "source_cn": "人形夏安",
@@ -175,7 +211,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.761900",
+      "updated_at": "2026-09-23T18:08:35.761900"
     },
     {
       "source_cn": "人形奇塔",
@@ -184,7 +222,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.766708",
+      "updated_at": "2026-09-23T18:08:35.766708"
     },
     {
       "source_cn": "人形妮基塔",
@@ -193,7 +233,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.771785",
+      "updated_at": "2026-09-23T18:08:35.771785"
     },
     {
       "source_cn": "人形威玛西娜",
@@ -202,7 +244,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.777234",
+      "updated_at": "2026-09-23T18:08:35.777234"
     },
     {
       "source_cn": "人形安朵丝",
@@ -211,7 +255,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.782812",
+      "updated_at": "2026-09-23T18:08:35.782812"
     },
     {
       "source_cn": "人形寇尔芙",
@@ -220,7 +266,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.787334",
+      "updated_at": "2026-09-23T18:08:35.787334"
     },
     {
       "source_cn": "人形寇尔芙·镜刻",
@@ -229,7 +277,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.793580",
+      "updated_at": "2026-09-23T18:08:35.793580"
     },
     {
       "source_cn": "人形巴希达",
@@ -238,7 +288,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.798935",
+      "updated_at": "2026-09-23T18:08:35.798935"
     },
     {
       "source_cn": "人形希丽雅",
@@ -247,7 +299,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.803612",
+      "updated_at": "2026-09-23T18:08:35.803612"
     },
     {
       "source_cn": "人形幼熙",
@@ -256,7 +310,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.808982",
+      "updated_at": "2026-09-23T18:08:35.808982"
     },
     {
       "source_cn": "人形托洛洛",
@@ -265,7 +321,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.814322",
+      "updated_at": "2026-09-23T18:08:35.814322"
     },
     {
       "source_cn": "人形春田",
@@ -274,7 +332,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.818749",
+      "updated_at": "2026-09-23T18:08:35.818749"
     },
     {
       "source_cn": "人形朝晖",
@@ -283,7 +343,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.824506",
+      "updated_at": "2026-09-23T18:08:35.824506"
     },
     {
       "source_cn": "人形杜莎妮",
@@ -292,7 +354,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.830150",
+      "updated_at": "2026-09-23T18:08:35.830150"
     },
     {
       "source_cn": "人形桑朵莱希",
@@ -301,7 +365,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.834965",
+      "updated_at": "2026-09-23T18:08:35.834965"
     },
     {
       "source_cn": "人形樱花",
@@ -310,7 +376,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.841025",
+      "updated_at": "2026-09-23T18:08:35.841025"
     },
     {
       "source_cn": "人形比悠卡",
@@ -319,7 +387,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.846137",
+      "updated_at": "2026-09-23T18:08:35.846137"
     },
     {
       "source_cn": "人形波波沙",
@@ -328,7 +398,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.850866",
+      "updated_at": "2026-09-23T18:08:35.850866"
     },
     {
       "source_cn": "人形洛塔",
@@ -337,7 +409,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.855959",
+      "updated_at": "2026-09-23T18:08:35.855959"
     },
     {
       "source_cn": "人形洛贝拉",
@@ -346,7 +420,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.862191",
+      "updated_at": "2026-09-23T18:08:35.862191"
     },
     {
       "source_cn": "人形海伦",
@@ -355,7 +431,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.867253",
+      "updated_at": "2026-09-23T18:08:35.867253"
     },
     {
       "source_cn": "人形玛绮朵",
@@ -364,7 +442,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.872864",
+      "updated_at": "2026-09-23T18:08:35.872864"
     },
     {
       "source_cn": "人形琳德",
@@ -373,7 +453,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.878373",
+      "updated_at": "2026-09-23T18:08:35.878373"
     },
     {
       "source_cn": "人形琼玖",
@@ -382,7 +464,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.883477",
+      "updated_at": "2026-09-23T18:08:35.883477"
     },
     {
       "source_cn": "人形秋桦",
@@ -391,7 +475,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.890312",
+      "updated_at": "2026-09-23T18:08:35.890312"
     },
     {
       "source_cn": "人形科谢尼娅",
@@ -400,7 +486,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.896202",
+      "updated_at": "2026-09-23T18:08:35.896202"
     },
     {
       "source_cn": "人形米什缇",
@@ -409,7 +497,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.901381",
+      "updated_at": "2026-09-23T18:08:35.901381"
     },
     {
       "source_cn": "人形米蒂尔",
@@ -418,7 +508,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.906797",
+      "updated_at": "2026-09-23T18:08:35.906797"
     },
     {
       "source_cn": "人形索普",
@@ -427,7 +519,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.912758",
+      "updated_at": "2026-09-23T18:08:35.912758"
     },
     {
       "source_cn": "人形索米",
@@ -436,7 +530,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.917605",
+      "updated_at": "2026-09-23T18:08:35.917605"
     },
     {
       "source_cn": "人形纳甘",
@@ -445,7 +541,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.922694",
+      "updated_at": "2026-09-23T18:08:35.922694"
     },
     {
       "source_cn": "人形纳美西丝",
@@ -454,7 +552,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.928822",
+      "updated_at": "2026-09-23T18:08:35.928822"
     },
     {
       "source_cn": "人形纳美西丝·衍光",
@@ -463,7 +563,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.934041",
+      "updated_at": "2026-09-23T18:08:35.934041"
     },
     {
       "source_cn": "人形绛雨",
@@ -472,7 +574,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.939292",
+      "updated_at": "2026-09-23T18:08:35.939292"
     },
     {
       "source_cn": "人形绯",
@@ -481,7 +585,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.945587",
+      "updated_at": "2026-09-23T18:08:35.945587"
     },
     {
       "source_cn": "人形维克托",
@@ -490,7 +596,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.950434",
+      "updated_at": "2026-09-23T18:08:35.950434"
     },
     {
       "source_cn": "人形维尔德",
@@ -499,7 +607,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.956701",
+      "updated_at": "2026-09-23T18:08:35.956701"
     },
     {
       "source_cn": "人形维普蕾",
@@ -508,7 +618,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.962539",
+      "updated_at": "2026-09-23T18:08:35.962539"
     },
     {
       "source_cn": "人形罗蕾莱",
@@ -517,7 +629,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.967412",
+      "updated_at": "2026-09-23T18:08:35.967412"
     },
     {
       "source_cn": "人形翡图萨",
@@ -526,7 +640,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.973058",
+      "updated_at": "2026-09-23T18:08:35.973058"
     },
     {
       "source_cn": "人形芙洛伦",
@@ -535,7 +651,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.978489",
+      "updated_at": "2026-09-23T18:08:35.978489"
     },
     {
       "source_cn": "人形芙铃",
@@ -544,7 +662,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.983786",
+      "updated_at": "2026-09-23T18:08:35.983786"
     },
     {
       "source_cn": "人形莉塔拉",
@@ -553,7 +673,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.989758",
+      "updated_at": "2026-09-23T18:08:35.989758"
     },
     {
       "source_cn": "人形莫辛纳甘",
@@ -562,7 +684,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.995236",
+      "updated_at": "2026-09-23T18:08:35.995236"
     },
     {
       "source_cn": "人形莱妮",
@@ -571,7 +695,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:35.999937",
+      "updated_at": "2026-09-23T18:08:35.999937"
     },
     {
       "source_cn": "人形莱娅",
@@ -580,7 +706,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:36.006295",
+      "updated_at": "2026-09-23T18:08:36.006295"
     },
     {
       "source_cn": "人形莱娜",
@@ -589,7 +717,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:36.012259",
+      "updated_at": "2026-09-23T18:08:36.012259"
     },
     {
       "source_cn": "人形贝丝蒂",
@@ -598,7 +728,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:36.018118",
+      "updated_at": "2026-09-23T18:08:36.018118"
     },
     {
       "source_cn": "人形闪电",
@@ -607,7 +739,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:36.023888",
+      "updated_at": "2026-09-23T18:08:36.023888"
     },
     {
       "source_cn": "人形阿斯缇亚",
@@ -616,7 +750,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:36.030083",
+      "updated_at": "2026-09-23T18:08:36.030083"
     },
     {
       "source_cn": "人形黛烟",
@@ -625,7 +761,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll title"
+      "notes": "Tactical Doll title",
+      "created_at": "2026-09-23T18:08:36.034848",
+      "updated_at": "2026-09-23T18:08:36.034848"
     },
     {
       "source_cn": "佩切涅格",
@@ -636,7 +774,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll (PKP)"
+      "notes": "Tactical Doll (PKP)",
+      "created_at": "2026-09-23T18:08:36.040675",
+      "updated_at": "2026-09-23T18:08:36.040675"
     },
     {
       "source_cn": "佩莉",
@@ -647,7 +787,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.045875",
+      "updated_at": "2026-09-23T18:08:36.045875"
     },
     {
       "source_cn": "佩里缇亚",
@@ -658,7 +800,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.050559",
+      "updated_at": "2026-09-23T18:08:36.050559"
     },
     {
       "source_cn": "克罗丽科",
@@ -669,7 +813,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.056511",
+      "updated_at": "2026-09-23T18:08:36.056511"
     },
     {
       "source_cn": "克莱妲",
@@ -680,7 +826,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.061824",
+      "updated_at": "2026-09-23T18:08:36.061824"
     },
     {
       "source_cn": "六分仪",
@@ -693,7 +841,9 @@
       ],
       "category": "Characters",
       "speaker_context": "Excludes brass instrument (黄铜)",
-      "notes": "Tactical Doll Sextans"
+      "notes": "Tactical Doll Sextans",
+      "created_at": "2026-09-23T18:08:36.066561",
+      "updated_at": "2026-09-23T18:08:36.066561"
     },
     {
       "source_cn": "六分仪小姐",
@@ -704,7 +854,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Doll Sextans address"
+      "notes": "Doll Sextans address",
+      "created_at": "2026-09-23T18:08:36.072720",
+      "updated_at": "2026-09-23T18:08:36.072720"
     },
     {
       "source_cn": "兰汀",
@@ -715,7 +867,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Adjutant Lentine without Adjutant"
+      "notes": "Adjutant Lentine without Adjutant",
+      "created_at": "2026-09-23T18:08:36.078232",
+      "updated_at": "2026-09-23T18:08:36.078232"
     },
     {
       "source_cn": "可露凯",
@@ -726,7 +880,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.082923",
+      "updated_at": "2026-09-23T18:08:36.082923"
     },
     {
       "source_cn": "哈卜茜",
@@ -737,7 +893,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.088095",
+      "updated_at": "2026-09-23T18:08:36.088095"
     },
     {
       "source_cn": "埃芙",
@@ -748,7 +906,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.093572",
+      "updated_at": "2026-09-23T18:08:36.093572"
     },
     {
       "source_cn": "塞布丽娜",
@@ -757,7 +917,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.098278",
+      "updated_at": "2026-09-23T18:08:36.098278"
     },
     {
       "source_cn": "夏克里",
@@ -768,7 +930,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.103725",
+      "updated_at": "2026-09-23T18:08:36.103725"
     },
     {
       "source_cn": "夏安",
@@ -779,7 +943,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.109102",
+      "updated_at": "2026-09-23T18:08:36.109102"
     },
     {
       "source_cn": "奇塔",
@@ -790,7 +956,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.113925",
+      "updated_at": "2026-09-23T18:08:36.113925"
     },
     {
       "source_cn": "妮基塔",
@@ -801,7 +969,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.118906",
+      "updated_at": "2026-09-23T18:08:36.118906"
     },
     {
       "source_cn": "威玛西娜",
@@ -812,7 +982,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.124259",
+      "updated_at": "2026-09-23T18:08:36.124259"
     },
     {
       "source_cn": "安朵丝",
@@ -823,7 +995,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.129725",
+      "updated_at": "2026-09-23T18:08:36.129725"
     },
     {
       "source_cn": "安朵斯",
@@ -834,7 +1008,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.135032",
+      "updated_at": "2026-09-23T18:08:36.135032"
     },
     {
       "source_cn": "寇尔芙",
@@ -845,7 +1021,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.140187",
+      "updated_at": "2026-09-23T18:08:36.140187"
     },
     {
       "source_cn": "小黑",
@@ -856,7 +1034,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Phaetusa naming another her"
+      "notes": "Phaetusa naming another her",
+      "created_at": "2026-09-23T18:08:36.145705",
+      "updated_at": "2026-09-23T18:08:36.145705"
     },
     {
       "source_cn": "巴希达",
@@ -867,7 +1047,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.150212",
+      "updated_at": "2026-09-23T18:08:36.150212"
     },
     {
       "source_cn": "幼熙",
@@ -878,7 +1060,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.154707",
+      "updated_at": "2026-09-23T18:08:36.154707"
     },
     {
       "source_cn": "托洛洛",
@@ -887,7 +1071,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.161109",
+      "updated_at": "2026-09-23T18:08:36.161109"
     },
     {
       "source_cn": "春田",
@@ -898,7 +1084,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.165732",
+      "updated_at": "2026-09-23T18:08:36.165732"
     },
     {
       "source_cn": "朝晖",
@@ -907,7 +1095,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.170016",
+      "updated_at": "2026-09-23T18:08:36.170016"
     },
     {
       "source_cn": "杜莎妮",
@@ -918,7 +1108,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.176007",
+      "updated_at": "2026-09-23T18:08:36.176007"
     },
     {
       "source_cn": "桑朵莱希",
@@ -931,7 +1123,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll (G36)"
+      "notes": "Tactical Doll (G36)",
+      "created_at": "2026-09-23T18:08:36.180546",
+      "updated_at": "2026-09-23T18:08:36.180546"
     },
     {
       "source_cn": "比悠卡",
@@ -942,7 +1136,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.185690",
+      "updated_at": "2026-09-23T18:08:36.185690"
     },
     {
       "source_cn": "波波沙",
@@ -953,7 +1149,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.190748",
+      "updated_at": "2026-09-23T18:08:36.190748"
     },
     {
       "source_cn": "洛塔",
@@ -964,7 +1162,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.195588",
+      "updated_at": "2026-09-23T18:08:36.195588"
     },
     {
       "source_cn": "洛贝拉",
@@ -975,18 +1175,20 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.199937",
+      "updated_at": "2026-09-23T18:08:36.199937"
     },
     {
       "source_cn": "海伦",
       "target_en": "Helen",
-      "bad_translations": [
-        "Helen"
-      ],
+      "bad_translations": [],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T21:58:04.738043",
+      "updated_at": "2026-09-23T21:58:04.738043"
     },
     {
       "source_cn": "海伦娜",
@@ -997,7 +1199,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Third-generation Doll / story entity"
+      "notes": "Third-generation Doll / story entity",
+      "created_at": "2026-09-23T18:08:36.211111",
+      "updated_at": "2026-09-23T18:08:36.211111"
     },
     {
       "source_cn": "清道夫",
@@ -1008,7 +1212,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Nyxie's Sangvis Ferri Doll name"
+      "notes": "Nyxie's Sangvis Ferri Doll name",
+      "created_at": "2026-09-23T18:08:36.216739",
+      "updated_at": "2026-09-23T18:08:36.216739"
     },
     {
       "source_cn": "玛绮朵",
@@ -1019,7 +1225,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.221623",
+      "updated_at": "2026-09-23T18:08:36.221623"
     },
     {
       "source_cn": "琳德",
@@ -1030,7 +1238,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.227395",
+      "updated_at": "2026-09-23T18:08:36.227395"
     },
     {
       "source_cn": "琼玖",
@@ -1039,7 +1249,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.232750",
+      "updated_at": "2026-09-23T18:08:36.232750"
     },
     {
       "source_cn": "秋桦",
@@ -1048,7 +1260,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.237299",
+      "updated_at": "2026-09-23T18:08:36.237299"
     },
     {
       "source_cn": "科德韦尔",
@@ -1059,7 +1273,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Key story researcher"
+      "notes": "Key story researcher",
+      "created_at": "2026-09-23T18:08:36.243497",
+      "updated_at": "2026-09-23T18:08:36.243497"
     },
     {
       "source_cn": "科谢妮亚",
@@ -1068,7 +1284,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.248253",
+      "updated_at": "2026-09-23T18:08:36.248253"
     },
     {
       "source_cn": "米什缇",
@@ -1079,7 +1297,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.256778",
+      "updated_at": "2026-09-23T18:08:36.256778"
     },
     {
       "source_cn": "索米",
@@ -1088,7 +1308,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.263165",
+      "updated_at": "2026-09-23T18:08:36.263165"
     },
     {
       "source_cn": "纳甘",
@@ -1097,7 +1319,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.272834",
+      "updated_at": "2026-09-23T18:08:36.272834"
     },
     {
       "source_cn": "纳美西丝",
@@ -1106,7 +1330,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.282355",
+      "updated_at": "2026-09-23T18:08:36.282355"
     },
     {
       "source_cn": "绛雨",
@@ -1115,7 +1341,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.288374",
+      "updated_at": "2026-09-23T18:08:36.288374"
     },
     {
       "source_cn": "绯",
@@ -1126,7 +1354,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.295230",
+      "updated_at": "2026-09-23T18:08:36.295230"
     },
     {
       "source_cn": "维克托",
@@ -1137,7 +1367,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.300797",
+      "updated_at": "2026-09-23T18:08:36.300797"
     },
     {
       "source_cn": "维尔德",
@@ -1148,7 +1380,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.306101",
+      "updated_at": "2026-09-23T18:08:36.306101"
     },
     {
       "source_cn": "维普蕾",
@@ -1159,7 +1393,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.312774",
+      "updated_at": "2026-09-23T18:08:36.312774"
     },
     {
       "source_cn": "罗蕾莱",
@@ -1170,7 +1406,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.317827",
+      "updated_at": "2026-09-23T18:08:36.317827"
     },
     {
       "source_cn": "芙洛伦",
@@ -1181,7 +1419,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.323390",
+      "updated_at": "2026-09-23T18:08:36.323390"
     },
     {
       "source_cn": "莉塔拉",
@@ -1192,7 +1432,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.328939",
+      "updated_at": "2026-09-23T18:08:36.328939"
     },
     {
       "source_cn": "莫辛纳甘",
@@ -1201,7 +1443,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.334103",
+      "updated_at": "2026-09-23T18:08:36.334103"
     },
     {
       "source_cn": "莱妮",
@@ -1212,7 +1456,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.339569",
+      "updated_at": "2026-09-23T18:08:36.339569"
     },
     {
       "source_cn": "莱娅",
@@ -1223,7 +1469,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.345164",
+      "updated_at": "2026-09-23T18:08:36.345164"
     },
     {
       "source_cn": "莱娜",
@@ -1234,7 +1482,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.350107",
+      "updated_at": "2026-09-23T18:08:36.350107"
     },
     {
       "source_cn": "闪电",
@@ -1245,7 +1495,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.356096",
+      "updated_at": "2026-09-23T18:08:36.356096"
     },
     {
       "source_cn": "黑眼",
@@ -1256,7 +1508,9 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Story character"
+      "notes": "Story character",
+      "created_at": "2026-09-23T18:08:36.362144",
+      "updated_at": "2026-09-23T18:08:36.362144"
     },
     {
       "source_cn": "黛烟",
@@ -1267,19 +1521,41 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Tactical Doll (Type 95)"
+      "notes": "Tactical Doll (Type 95)",
+      "created_at": "2026-09-23T18:08:36.367172",
+      "updated_at": "2026-09-23T18:08:36.367172"
     },
     {
       "source_cn": "人形",
-      "target_en": "T-Doll",
+      "target_en": "Doll",
       "bad_translations": [
-        "Doll",
-        "Android"
+        "Android",
+        "Humanoid",
+        "Puppet",
+        "Robot"
       ],
       "exclusions": [],
       "category": "Concept",
       "speaker_context": "Any",
-      "notes": "Tactical Doll classification"
+      "notes": "Doll classification (generic / civilian / autonomous doll)",
+      "created_at": "2026-09-23T21:58:04.738043",
+      "updated_at": "2026-09-23T21:58:04.738043"
+    },
+    {
+      "source_cn": "战术人形",
+      "target_en": "T-Doll",
+      "bad_translations": [
+        "Tactical Android",
+        "Tactical Humanoid",
+        "Combat Doll",
+        "Tactical Puppet"
+      ],
+      "exclusions": [],
+      "category": "Concept",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll classification (combat-configured doll)",
+      "created_at": "2026-09-23T21:58:04.738043",
+      "updated_at": "2026-09-23T21:58:04.738043"
     },
     {
       "source_cn": "浊刻伤害",
@@ -1290,7 +1566,9 @@
       "exclusions": [],
       "category": "Damage",
       "speaker_context": "Any",
-      "notes": "Hydro damage"
+      "notes": "Hydro damage",
+      "created_at": "2026-09-23T18:08:36.379453",
+      "updated_at": "2026-09-23T18:08:36.379453"
     },
     {
       "source_cn": "刘莳",
@@ -1301,7 +1579,9 @@
       "exclusions": [],
       "category": "Doll",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.384386",
+      "updated_at": "2026-09-23T18:08:36.384386"
     },
     {
       "source_cn": "寇尔芙·镜刻",
@@ -1317,7 +1597,9 @@
       "exclusions": [],
       "category": "Doll",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.389399",
+      "updated_at": "2026-09-23T18:08:36.389399"
     },
     {
       "source_cn": "希丽雅",
@@ -1328,7 +1610,9 @@
       "exclusions": [],
       "category": "Doll",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.395619",
+      "updated_at": "2026-09-23T18:08:36.395619"
     },
     {
       "source_cn": "蔻尔芙·镜刻",
@@ -1344,7 +1628,9 @@
       "exclusions": [],
       "category": "Doll",
       "speaker_context": "Any",
-      "notes": "Tactical Doll name"
+      "notes": "Tactical Doll name",
+      "created_at": "2026-09-23T18:08:36.400671",
+      "updated_at": "2026-09-23T18:08:36.400671"
     },
     {
       "source_cn": "吉拉尔",
@@ -1355,7 +1641,9 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Girard"
+      "notes": "Girard",
+      "created_at": "2026-09-23T18:08:36.405631",
+      "updated_at": "2026-09-23T18:08:36.405631"
     },
     {
       "source_cn": "奥尔劳格财团",
@@ -1366,7 +1654,9 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate"
+      "notes": "Orlog Conglomerate",
+      "created_at": "2026-09-23T18:08:36.405631",
+      "updated_at": "2026-09-23T18:08:36.405631"
     },
     {
       "source_cn": "新苏联",
@@ -1377,7 +1667,23 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Neo-Soviet Union"
+      "notes": "Neo-Soviet Union",
+      "created_at": "2026-09-23T18:08:36.411959",
+      "updated_at": "2026-09-23T18:08:36.411959"
+    },
+    {
+      "source_cn": "曼尼安保",
+      "target_en": "Mangi Security",
+      "bad_translations": [
+        "Manny Security",
+        "Manni Security"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Mangi Security faction",
+      "created_at": "2026-09-23T18:08:36.424064",
+      "updated_at": "2026-09-23T18:08:36.424064"
     },
     {
       "source_cn": "法本集团",
@@ -1393,7 +1699,9 @@
       ],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate"
+      "notes": "Orlog Conglomerate",
+      "created_at": "2026-09-23T19:14:19.750929",
+      "updated_at": "2026-09-23T19:14:19.750929"
     },
     {
       "source_cn": "罗克萨特主义合众国联盟",
@@ -1404,7 +1712,9 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Union of Rossartrist Nations Coalition"
+      "notes": "Union of Rossartrist Nations Coalition",
+      "created_at": "2026-09-23T18:08:36.417757",
+      "updated_at": "2026-09-23T18:08:36.417757"
     },
     {
       "source_cn": "赛诺菲与法本集团",
@@ -1419,7 +1729,9 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate"
+      "notes": "Orlog Conglomerate",
+      "created_at": "2026-09-23T19:14:19.736236",
+      "updated_at": "2026-09-23T19:14:19.736236"
     },
     {
       "source_cn": "铁血",
@@ -1432,7 +1744,9 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Sangvis Ferri faction"
+      "notes": "Sangvis Ferri faction",
+      "created_at": "2026-09-23T18:08:36.424064",
+      "updated_at": "2026-09-23T18:08:36.424064"
     },
     {
       "source_cn": "铁血工造",
@@ -1445,7 +1759,9 @@
       "exclusions": [],
       "category": "Factions",
       "speaker_context": "Any",
-      "notes": "Sangvis Ferri Industrial Manufacturing"
+      "notes": "Sangvis Ferri Industrial Manufacturing",
+      "created_at": "2026-09-23T18:08:36.431069",
+      "updated_at": "2026-09-23T18:08:36.431069"
     },
     {
       "source_cn": "主人",
@@ -1457,7 +1773,9 @@
       "exclusions": [],
       "category": "Honorific",
       "speaker_context": "Centaureissi / Maids",
-      "notes": "Maid doll address towards the Commander"
+      "notes": "Maid doll address towards the Commander",
+      "created_at": "2026-09-23T18:08:36.437060",
+      "updated_at": "2026-09-23T18:08:36.437060"
     },
     {
       "source_cn": "指挥官",
@@ -1466,7 +1784,9 @@
       "exclusions": [],
       "category": "Honorific",
       "speaker_context": "Dolls addressing player",
-      "notes": "Standard address for the protagonist player"
+      "notes": "Standard address for the protagonist player",
+      "created_at": "2026-09-23T18:08:36.443932",
+      "updated_at": "2026-09-23T18:08:36.443932"
     },
     {
       "source_cn": "阁下",
@@ -1481,7 +1801,9 @@
       ],
       "category": "Honorific",
       "speaker_context": "Sextans / Formal address",
-      "notes": "Formal aristocratic address used towards the Commander"
+      "notes": "Formal aristocratic address used towards the Commander",
+      "created_at": "2026-09-23T18:08:36.449351",
+      "updated_at": "2026-09-23T18:08:36.449351"
     },
     {
       "source_cn": "净化区",
@@ -1492,7 +1814,9 @@
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
-      "notes": "Restored zone"
+      "notes": "Restored zone",
+      "created_at": "2026-09-23T18:08:36.454918",
+      "updated_at": "2026-09-23T18:08:36.454918"
     },
     {
       "source_cn": "希岸空间",
@@ -1505,7 +1829,9 @@
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
-      "notes": "Virtual realm created by Relic tech"
+      "notes": "Virtual realm created by Relic tech",
+      "created_at": "2026-09-23T18:08:36.460800",
+      "updated_at": "2026-09-23T18:08:36.460800"
     },
     {
       "source_cn": "红区",
@@ -1514,7 +1840,9 @@
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
-      "notes": "Severe contamination zone"
+      "notes": "Severe contamination zone",
+      "created_at": "2026-09-23T18:08:36.465504",
+      "updated_at": "2026-09-23T18:08:36.465504"
     },
     {
       "source_cn": "绿区",
@@ -1523,7 +1851,9 @@
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
-      "notes": "Habitable safe zone"
+      "notes": "Habitable safe zone",
+      "created_at": "2026-09-23T18:08:36.470405",
+      "updated_at": "2026-09-23T18:08:36.470405"
     },
     {
       "source_cn": "黄区",
@@ -1532,7 +1862,9 @@
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
-      "notes": "Contamination zone"
+      "notes": "Contamination zone",
+      "created_at": "2026-09-23T18:08:36.475638",
+      "updated_at": "2026-09-23T18:08:36.475638"
     },
     {
       "source_cn": "伯介姆",
@@ -1544,7 +1876,9 @@
       "exclusions": [],
       "category": "Lore / Entity",
       "speaker_context": "Any",
-      "notes": "Extraterrestrial lifeform / anomaly"
+      "notes": "Extraterrestrial lifeform / anomaly",
+      "created_at": "2026-09-23T18:08:36.480344",
+      "updated_at": "2026-09-23T18:08:36.480344"
     },
     {
       "source_cn": "星渊",
@@ -1557,7 +1891,9 @@
       "exclusions": [],
       "category": "Lore / Entity",
       "speaker_context": "Any",
-      "notes": "Avatar of Boojum (Ateraxis)"
+      "notes": "Avatar of Boojum (Ateraxis)",
+      "created_at": "2026-09-23T18:08:36.485602",
+      "updated_at": "2026-09-23T18:08:36.485602"
     },
     {
       "source_cn": "塌陷液",
@@ -1568,7 +1904,9 @@
       "exclusions": [],
       "category": "Lore / Tech",
       "speaker_context": "Any",
-      "notes": "Relic energy substance"
+      "notes": "Relic energy substance",
+      "created_at": "2026-09-23T18:08:36.493220",
+      "updated_at": "2026-09-23T18:08:36.493220"
     },
     {
       "source_cn": "塌陷辐射",
@@ -1579,7 +1917,9 @@
       "exclusions": [],
       "category": "Lore / Tech",
       "speaker_context": "Any",
-      "notes": "Radiation caused by Collapse Fluid"
+      "notes": "Radiation caused by Collapse Fluid",
+      "created_at": "2026-09-23T18:08:36.498625",
+      "updated_at": "2026-09-23T18:08:36.498625"
     },
     {
       "source_cn": "心智云图",
@@ -1590,7 +1930,9 @@
       "exclusions": [],
       "category": "Lore / Tech",
       "speaker_context": "Any",
-      "notes": "Doll consciousness backup/storage system"
+      "notes": "Doll consciousness backup/storage system",
+      "created_at": "2026-09-23T18:08:36.503304",
+      "updated_at": "2026-09-23T18:08:36.503304"
     },
     {
       "source_cn": "烙印系统",
@@ -1601,7 +1943,9 @@
       "exclusions": [],
       "category": "Lore / Tech",
       "speaker_context": "Any",
-      "notes": "Gun-Doll synchronization link"
+      "notes": "Gun-Doll synchronization link",
+      "created_at": "2026-09-23T18:08:36.508296",
+      "updated_at": "2026-09-23T18:08:36.508296"
     },
     {
       "source_cn": "伊菲",
@@ -1612,7 +1956,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T19:02:00.000000",
+      "updated_at": "2026-09-23T19:02:00.000000"
     },
     {
       "source_cn": "佩妮泽",
@@ -1623,7 +1969,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T18:08:36.513824",
+      "updated_at": "2026-09-23T18:08:36.513824"
     },
     {
       "source_cn": "奇洛薇格",
@@ -1635,7 +1983,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC - Paradeus"
+      "notes": "NPC - Paradeus",
+      "created_at": "2026-09-23T18:08:36.518461",
+      "updated_at": "2026-09-23T18:08:36.518461"
     },
     {
       "source_cn": "希尔",
@@ -1646,7 +1996,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T18:08:36.523642",
+      "updated_at": "2026-09-23T18:08:36.523642"
     },
     {
       "source_cn": "德尔",
@@ -1657,7 +2009,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T18:08:36.529363",
+      "updated_at": "2026-09-23T18:08:36.529363"
     },
     {
       "source_cn": "朗尼",
@@ -1669,7 +2023,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC - Mangi Security"
+      "notes": "NPC - Mangi Security",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "柯尼",
@@ -1681,7 +2037,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC - Mangi Security"
+      "notes": "NPC - Mangi Security",
+      "created_at": "2026-09-23T18:08:36.534346",
+      "updated_at": "2026-09-23T18:08:36.534346"
     },
     {
       "source_cn": "欧菲露妮",
@@ -1696,7 +2054,9 @@
       ],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "accord to IOP her name will Orphelune, but we use Botzu is translated"
+      "notes": "accord to IOP her name will Orphelune, but we use Botzu is translated",
+      "created_at": "2026-09-23T18:08:36.539747",
+      "updated_at": "2026-09-23T18:08:36.539747"
     },
     {
       "source_cn": "欧菲露妮小姐",
@@ -1707,7 +2067,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Igia talk to Orphelune",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T18:08:36.545955",
+      "updated_at": "2026-09-23T18:08:36.545955"
     },
     {
       "source_cn": "沈美玲",
@@ -1718,7 +2080,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T18:08:36.550888",
+      "updated_at": "2026-09-23T18:08:36.550888"
     },
     {
       "source_cn": "瓦西尔",
@@ -1731,7 +2095,9 @@
       ],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC - Mokosh"
+      "notes": "NPC - Mokosh",
+      "created_at": "2026-09-23T19:02:00.000000",
+      "updated_at": "2026-09-23T19:02:00.000000"
     },
     {
       "source_cn": "知穗",
@@ -1742,7 +2108,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC - Tactical Doll name"
+      "notes": "NPC - Tactical Doll name",
+      "created_at": "2026-09-23T19:02:00.000000",
+      "updated_at": "2026-09-23T19:02:00.000000"
     },
     {
       "source_cn": "美玲",
@@ -1754,7 +2122,9 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T18:08:36.556816",
+      "updated_at": "2026-09-23T18:08:36.556816"
     },
     {
       "source_cn": "赫利",
@@ -1763,18 +2133,20 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC",
+      "created_at": "2026-09-23T19:02:00.000000",
+      "updated_at": "2026-09-23T19:02:00.000000"
     },
     {
       "source_cn": "夏日投手",
       "target_en": "Summer Pitcher",
-      "bad_translations": [
-        "Summer Pitcher"
-      ],
+      "bad_translations": [],
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T21:58:04.738043",
+      "updated_at": "2026-09-23T21:58:04.738043"
     },
     {
       "source_cn": "樱花",
@@ -1785,7 +2157,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.566772",
+      "updated_at": "2026-09-23T18:08:36.566772"
     },
     {
       "source_cn": "睡醒的人鱼",
@@ -1796,7 +2170,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.572201",
+      "updated_at": "2026-09-23T18:08:36.572201"
     },
     {
       "source_cn": "绀星绮愿",
@@ -1807,7 +2183,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.577856",
+      "updated_at": "2026-09-23T18:08:36.577856"
     },
     {
       "source_cn": "蔚蓝轨迹",
@@ -1818,7 +2196,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.582776",
+      "updated_at": "2026-09-23T18:08:36.582776"
     },
     {
       "source_cn": "赛场火花",
@@ -1829,7 +2209,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.587700",
+      "updated_at": "2026-09-23T18:08:36.587700"
     },
     {
       "source_cn": "跃行脱兔",
@@ -1840,18 +2222,20 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.594256",
+      "updated_at": "2026-09-23T18:08:36.594256"
     },
     {
       "source_cn": "速度之星",
-      "target_en": "Speed ​​Star",
-      "bad_translations": [
-        "Speed ​​Star"
-      ],
+      "target_en": "Speed Star",
+      "bad_translations": [],
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T21:58:04.738043",
+      "updated_at": "2026-09-23T21:58:04.738043"
     },
     {
       "source_cn": "闪耀心愿",
@@ -1862,7 +2246,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.604225",
+      "updated_at": "2026-09-23T18:08:36.604225"
     },
     {
       "source_cn": "静谧暗河",
@@ -1873,7 +2259,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.610183",
+      "updated_at": "2026-09-23T18:08:36.610183"
     },
     {
       "source_cn": "黎明战役",
@@ -1884,7 +2272,9 @@
       "exclusions": [],
       "category": "Outfit",
       "speaker_context": "Any",
-      "notes": "Costumes"
+      "notes": "Costumes",
+      "created_at": "2026-09-23T18:08:36.615624",
+      "updated_at": "2026-09-23T18:08:36.615624"
     },
     {
       "source_cn": "乐园计划",
@@ -1895,7 +2285,9 @@
       "exclusions": [],
       "category": "Projects",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate's Projects"
+      "notes": "Orlog Conglomerate's Projects",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "冕洞计划",
@@ -1906,7 +2298,9 @@
       "exclusions": [],
       "category": "Projects",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate's Projects"
+      "notes": "Orlog Conglomerate's Projects",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "恒星风计划",
@@ -1917,7 +2311,9 @@
       "exclusions": [],
       "category": "Projects",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate's Projects"
+      "notes": "Orlog Conglomerate's Projects",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "摇篮曲计划",
@@ -1926,7 +2322,9 @@
       "exclusions": [],
       "category": "Projects",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate's Projects"
+      "notes": "Orlog Conglomerate's Projects",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "泊维西计划",
@@ -1937,7 +2335,9 @@
       "exclusions": [],
       "category": "Projects",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate's Projects"
+      "notes": "Orlog Conglomerate's Projects",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "霍洛戈计划",
@@ -1948,7 +2348,9 @@
       "exclusions": [],
       "category": "Projects",
       "speaker_context": "Any",
-      "notes": "Orlog Conglomerate's Projects"
+      "notes": "Orlog Conglomerate's Projects",
+      "created_at": "2026-09-23T21:19:00.000000",
+      "updated_at": "2026-09-23T21:19:00.000000"
     },
     {
       "source_cn": "艾莫",
@@ -1960,7 +2362,9 @@
       "exclusions": [],
       "category": "Vehicles & Base",
       "speaker_context": "Any",
-      "notes": "Base vehicle name"
+      "notes": "Base vehicle name",
+      "created_at": "2026-09-23T18:08:36.620146",
+      "updated_at": "2026-09-23T18:08:36.620146"
     },
     {
       "source_cn": "艾莫号",
@@ -1973,7 +2377,9 @@
       "exclusions": [],
       "category": "Vehicles & Base",
       "speaker_context": "Any",
-      "notes": "Commander mobile command vehicle / base"
+      "notes": "Commander mobile command vehicle / base",
+      "created_at": "2026-09-23T18:08:36.625935",
+      "updated_at": "2026-09-23T18:08:36.625935"
     }
   ]
 }

@@ -25,7 +25,8 @@ A **Translation Memory (TM)** system backed by a local SQLite database (`transla
    * Do NOT introduce `pip install` packages (e.g., do not require `pandas`, `customtkinter`, `requests`, etc.).
    * GUI is built using built-in `tkinter` and `ttk` with custom dark styling.
 2. **Database Management**:
-   * Database file: `translation_memory.db` (~129 MB, SQLite in WAL mode, contains ~269,278 translations and 183 lore rules).
+   * Database file: `translation_memory.db` (~129 MB, SQLite in WAL mode, contains ~269,314 translations and 192 lore rules).
+   * Schema: Tables `translations` and `glossary` feature full audit timestamps (`created_at`, `updated_at`) and verification flags (`is_verified`).
    * **DO NOT track or commit `translation_memory.db` to Git** (GitHub has a 100 MB hard limit). It is ignored via `.gitignore`.
    * The user backs up and shares the database via Google Drive.
 3. **Workspace Protection**:
@@ -86,21 +87,26 @@ Protects against recurring AI/machine translation mistranslations:
 * Example: `艾莫号` $\to$ AI translates as `Emmo` $\to$ Auto-fixed to **`the Elmo`**.
 
 ### How It Works:
-1. **Target English Only**: The original Chinese text (`source_cn`) is NEVER modified. The glossary only inspects and fixes English text (`target_en`).
-2. **Chinese Guard**: Only searches for banned English words if the original Chinese sentence actually contains the Chinese keyword (`source_cn LIKE '%keyword%'`).
-3. **Word Boundary Safeguard (`\b`)**: All bad translations are searched using `\b{banned_term}\b`. This ensures normal English words are never damaged (e.g. `\bLandin\b` will **never** match or corrupt `landing`).
-4. **Exclusions (`exclusions`)**:
+1. **Ingestion Gate (Chunk Import Auto-Fix)**: The glossary runs automatically when importing new chunks in Tab 4 (`import_translated_file`), cleaning AI mistranslations *before* committing them into `translation_memory.db`.
+2. **Database Immutability during Patch Updates**: Tab 1 (20-Day Patch Updater) is **read-only for the database** (`audit_db=False`). It extracts and generates the `.bytes` game file without retroactively mutating verified historical database entries.
+3. **Verification Flag (`is_verified`)**: Table `translations` has `is_verified INTEGER DEFAULT 1`. Verified entries are locked against automated regex overwrites, preventing human edits and natural English phrasing (e.g. natural pronouns like `They`) from being corrupted.
+4. **Hyphen-Aware Boundary Safeguard**: Bad translations use `(?<![\w\-])term(?![\w\-])` instead of naive `\b`. This guarantees words like `Doll` will never match inside hyphenated compounds (e.g., `T-Doll`, `A-Doll`, `Non-Doll`).
+5. **Context & Idempotency Protection**: `safe_replace_term()` ensures that already-correct target phrases (e.g. `Speed Star`, `Project Eden`) are protected from having sub-words re-replaced.
+6. **Exclusions (`exclusions`)**:
    * If any string in `exclusions` is found in the Chinese sentence, the auto-fixer **skips that sentence completely**.
    * **Title/Context Guard**: `欧菲露妮` $\to$ `Ophelune` with exclusion `["欧菲露妮小姐"]`. This ensures maid Igia's respectful address `Young Mistress` is 100% protected and never overwritten.
    * **Hierarchical Faction Guard**: `法本集团` $\to$ `FABN Group` with exclusion `["赛诺菲与法本集团"]`. This ensures the longer name `赛诺菲与法本集团` $\to$ `Cecht FABN` is cleanly applied without partial conflict.
-5. **Community Glossary (183 Terms)**:
-   * Expanded with 112 T-Doll names from Discord.
-   * Historical typos resolved: `人形莱娅` $\to$ `T-Doll Leva`, `人形莱娜` $\to$ `T-Doll Lenna`, `人形六分仪` $\to$ `T-Doll Sextans`, `莫辛纳甘` $\to$ `Mosin-Nagant`.
+7. **Canonical Terms (191 Active Terms)**:
+   * `人形` is correctly defined as `Doll` (generic / civilian).
+   * `战术人形` is defined as `T-Doll` (combat-configured).
+   * Expanded with 112 T-Doll names and lore factions.
 
 ---
 
 ## 🧩 6. Untranslated Chunks & Importer Format
 When importing chunks via Tab 4 (`Import Selected Chunk`):
+* **Automatic Glossary Clean-up**: Applied automatically at import time; logs all terms corrected.
+* **Sets `is_verified = 1`**: Newly imported strings are saved directly into `translation_memory.db` as verified.
 * **Core Rule**: The JSON **Key** must be the original Chinese text, and the **Value** must be the English translation.
 * **Standard Format**:
   ```json
@@ -116,10 +122,17 @@ When importing chunks via Tab 4 (`Import Selected Chunk`):
 
 ---
 
-## 🔍 7. Database Status & Past Patch Oddities
-* **Total Translations**: 269,278 lines.
-* **Untranslated in Chinese**: Only 36 lines remain untranslated in the entire database (99.985% fully translated).
-* **The Cecilia Story Quirk**: In a past patch, Mica Team added single characters (e.g. `落入` $\to$ `落入了`, and `劝阻` $\to$ `鼓动`). Because exact string matching is used, this created 4 untranslated entries (Rows 10442, 10443, 10444, 125821). These have been fully matched and updated with their official English text in `translation_memory.db`.
+## 🔍 7. Database Status & Verification Architecture
+* **Total Translations**: 269,314 lines (100% verified with `is_verified = 1`).
+* **Untranslated in Chinese**: 0 lines (100% translated).
+* **Timestamps & Audit Tracking**:
+  - `translations`: `source_cn`, `target_en`, `category`, `context`, `created_at`, `updated_at`, `is_verified`.
+  - `glossary`: `source_cn`, `target_en`, `bad_translations`, `exclusions`, `category`, `speaker_context`, `notes`, `created_at`, `updated_at`.
+* **Database Immutability & Workflow**:
+  - The SQLite database is treated as the source of truth and is strictly read-only during routine 20-day patch updates (`audit_db=False`).
+  - Automated lore glossary regex rules run strictly as an ingestion gate when importing newly translated chunks (Tab 4).
+  - Fine-grained corrections and quality fixes are performed directly row-by-row in DBeaver by the user.
+* **The Cecilia Story Quirk**: In a past patch, Mica Team added single characters (e.g. `落入` $\to$ `落入了`, and `劝阻` $\to$ `鼓动`). These have been fully matched and updated with their official English text in `translation_memory.db`.
 
 ---
 

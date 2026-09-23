@@ -406,11 +406,12 @@ class GFL2TranslatorApp(tk.Tk):
                 if untrans > 0:
                     self.log(f"ℹ Found {untrans:,} new/untranslated strings. Saved to untranslated_chunks/ for translation.")
 
-                # Step 3: Lore Glossary Audit & Auto-Fix
+                # Step 3: Lore Glossary Check on Generated Game Package (Read-Only for Database)
                 if auto_fix:
-                    self.log("\n[Step 3/4] Running Lore Glossary audit & auto-fixer...")
-                    report = apply_glossary.audit_and_fix(DEFAULT_DB, target_en, exported_cn, dry_run=False)
-                    self.log("✓ Lore glossary audit complete. All official terms enforced!")
+                    self.log("\n[Step 3/4] Checking Lore Glossary & Canon Terms on generated package...")
+                    report = apply_glossary.audit_and_fix(DEFAULT_DB, target_en, exported_cn, dry_run=False, audit_db=False)
+                    json_cnt = sum(report.get("json", {}).values()) if isinstance(report, dict) else 0
+                    self.log(f"✓ Lore glossary check complete. Enforced {json_cnt} terms in game package.")
 
                 # Step 4: Rebuild .bytes
                 self.log(f"\n[Step 4/4] Compiling final game binary package: {out_file.name}...")
@@ -703,15 +704,41 @@ class GFL2TranslatorApp(tk.Tk):
     def _glossary_autofix(self):
         target_en = DEFAULT_OUTPUT_DIR / "translations_eng.json"
         base_cn = DEFAULT_OUTPUT_DIR / "translations.json"
-        if not target_en.exists():
-            messagebox.showwarning("Notice", f"Target file not found:\n{target_en}\n\nPlease run the Patch Updater first.")
+
+        ans = messagebox.askyesnocancel(
+            "Glossary Audit Scope",
+            "Do you want to audit ONLY unverified strings?\n\n"
+            "• Yes: Audit unverified strings only (Safe, recommended)\n"
+            "• No: Audit ALL database rows (Strict global scan)\n"
+            "• Cancel: Abort audit"
+        )
+        if ans is None:
             return
+
+        only_unverified = ans
 
         def worker():
             try:
-                self.log(f"[{datetime.now().strftime('%H:%M:%S')}] Auditing Lore Glossary rules against database and translations_eng.json...")
-                report = apply_glossary.audit_and_fix(DEFAULT_DB, target_en, base_cn, dry_run=False)
-                self.after(0, lambda: messagebox.showinfo("Audit Complete", "Glossary audit and auto-fix complete!\nAll official GFL2 lore terms are enforced."))
+                scope_label = "unverified strings only" if only_unverified else "ALL rows in database"
+                self.log(f"[{datetime.now().strftime('%H:%M:%S')}] Auditing Lore Glossary rules ({scope_label})...")
+                report = apply_glossary.audit_and_fix(
+                    DEFAULT_DB,
+                    target_en if target_en.exists() else None,
+                    base_cn if base_cn.exists() else None,
+                    dry_run=False,
+                    audit_db=True,
+                    only_unverified=only_unverified
+                )
+                db_cnt = sum(report.get("db", {}).values()) if isinstance(report, dict) else 0
+                json_cnt = sum(report.get("json", {}).values()) if isinstance(report, dict) else 0
+                self.log(f"✓ Lore glossary audit complete: {db_cnt} DB entries fixed, {json_cnt} JSON lines fixed.")
+                self.after(0, lambda: messagebox.showinfo(
+                    "Audit Complete",
+                    f"Glossary audit and auto-fix complete!\n\n"
+                    f"• Database rows updated: {db_cnt}\n"
+                    f"• JSON lines updated: {json_cnt}\n\n"
+                    f"All official GFL2 lore terms are enforced."
+                ))
             except Exception as e:
                 self.after(0, lambda err=e: messagebox.showerror("Error", str(err)))
 
