@@ -12,6 +12,8 @@ A complete, high-performance localization maintenance toolkit for **Girls' Front
 ### 1. System Requirements
 * **Operating System**: Windows 10 / 11
 * **Python**: Python 3.10 or higher (Uses Python standard library only; **no `pip install` required**)
+* **Database**: SQLite3 (Pre-bundled with Python standard library — **no database server installation needed**)
+* *(Optional Database GUI)*: **[DBeaver](https://dbeaver.io/)** or **[DB Browser for SQLite](https://sqlitebrowser.org/)** (if you want a visual UI to explore `translation_memory.db`)
 
 ### 2. Game Files Requirement (For New Cloners)
 To generate your personal Translation Memory database on a fresh clone, you **MUST** provide two `.bytes` files from the **SAME game version**:
@@ -49,6 +51,8 @@ langpackage_scripts/
 │   ├── untranslated_chunks/        # ~250-line chunks ready for AI translation
 │   └── LangPackageTableCnData.bytes# Final ready-to-play translated game binary
 ├── .gitignore                      # Git ignore rules
+├── app_ui.py                       # Modern Desktop GUI application
+├── run_ui.bat                      # Double-click launcher for Desktop UI
 ├── apply_glossary.py               # Database-driven Lore Glossary auditor & auto-fixer
 ├── gfl2_translation_sync.py        # Core Translation Memory & update sync engine
 ├── langpackage_export.py           # Extracts .bytes files into readable JSON
@@ -57,6 +61,17 @@ langpackage_scripts/
 ├── run_glossary.bat                # Double-click launcher for Lore Glossary manager
 └── run_translation_sync.bat        # Double-click launcher for translation sync
 ```
+
+---
+
+## 🖥️ Graphical User Interface (Desktop UI)
+
+For a one-click visual experience, double-click **`run_ui.bat`** (or run `python app_ui.py`):
+
+* **Modal Upload Dialog**: Select any input `.bytes` file with a native Windows file browser.
+* **Modal Download/Save Dialog**: Choose custom output destinations to drop your finished translated mod file.
+* **Integrated Tools**: Includes 20-Day Patch Updater, First-Time Database Builder, Lore Glossary Manager, Untranslated Chunks Manager, and Database Backup in a single sleek dark-mode window.
+
 
 ---
 
