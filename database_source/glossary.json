@@ -1,10 +1,12 @@
 {
-  "total_terms": 143,
+  "total_terms": 183,
   "glossary": [
     {
       "source_cn": "乌尔丽德",
       "target_en": "Ullrid",
-      "bad_translations": [],
+      "bad_translations": [
+        "Ulride"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -639,7 +641,9 @@
     {
       "source_cn": "佩莉",
       "target_en": "Peri",
-      "bad_translations": [],
+      "bad_translations": [
+        "Peili"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -648,7 +652,9 @@
     {
       "source_cn": "佩里缇亚",
       "target_en": "Peritya",
-      "bad_translations": [],
+      "bad_translations": [
+        "Peritia"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -657,7 +663,9 @@
     {
       "source_cn": "克罗丽科",
       "target_en": "Krolik",
-      "bad_translations": [],
+      "bad_translations": [
+        "Cloriko"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -666,7 +674,9 @@
     {
       "source_cn": "克莱妲",
       "target_en": "Koleda",
-      "bad_translations": [],
+      "bad_translations": [
+        "Cleida"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -710,7 +720,31 @@
     {
       "source_cn": "可露凯",
       "target_en": "Klukai",
-      "bad_translations": [],
+      "bad_translations": [
+        "Colukai"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "哈卜茜",
+      "target_en": "Harpsy",
+      "bad_translations": [
+        "Habshi"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "埃芙",
+      "target_en": "Alva",
+      "bad_translations": [
+        "Eve"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -728,7 +762,20 @@
     {
       "source_cn": "夏克里",
       "target_en": "Sharkry",
-      "bad_translations": [],
+      "bad_translations": [
+        "Shakri"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "夏安",
+      "target_en": "Cheyanne",
+      "bad_translations": [
+        "Cheyenne"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -737,7 +784,9 @@
     {
       "source_cn": "奇塔",
       "target_en": "Cheeta",
-      "bad_translations": [],
+      "bad_translations": [
+        "Chita"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -746,7 +795,9 @@
     {
       "source_cn": "妮基塔",
       "target_en": "Nikketa",
-      "bad_translations": [],
+      "bad_translations": [
+        "Nikita"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -755,7 +806,9 @@
     {
       "source_cn": "威玛西娜",
       "target_en": "Voymastina",
-      "bad_translations": [],
+      "bad_translations": [
+        "Wimasina"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -764,7 +817,9 @@
     {
       "source_cn": "安朵丝",
       "target_en": "Andoris",
-      "bad_translations": [],
+      "bad_translations": [
+        "Andos"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -773,7 +828,9 @@
     {
       "source_cn": "安朵斯",
       "target_en": "Andoris",
-      "bad_translations": [],
+      "bad_translations": [
+        "Andos"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -782,16 +839,31 @@
     {
       "source_cn": "寇尔芙",
       "target_en": "Colphne",
-      "bad_translations": [],
+      "bad_translations": [
+        "Colph"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Tactical Doll name"
     },
     {
+      "source_cn": "小黑",
+      "target_en": "Nyxie",
+      "bad_translations": [
+        "Little Black"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Phaetusa naming another her"
+    },
+    {
       "source_cn": "巴希达",
       "target_en": "Balthilde",
-      "bad_translations": [],
+      "bad_translations": [
+        "Bashida"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -800,7 +872,9 @@
     {
       "source_cn": "幼熙",
       "target_en": "YooHee",
-      "bad_translations": [],
+      "bad_translations": [
+        "Youxi"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -818,7 +892,9 @@
     {
       "source_cn": "春田",
       "target_en": "Springfield",
-      "bad_translations": [],
+      "bad_translations": [
+        "Chuntian"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -836,7 +912,9 @@
     {
       "source_cn": "杜莎妮",
       "target_en": "Dushevnaya",
-      "bad_translations": [],
+      "bad_translations": [
+        "Dushani"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -847,7 +925,8 @@
       "target_en": "Centaureissi",
       "bad_translations": [
         "Sandoraixi",
-        "Sandorai"
+        "Sandorai",
+        "Sandrashi"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -857,7 +936,9 @@
     {
       "source_cn": "比悠卡",
       "target_en": "Belka",
-      "bad_translations": [],
+      "bad_translations": [
+        "Biyouka"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -866,7 +947,9 @@
     {
       "source_cn": "波波沙",
       "target_en": "Papasha",
-      "bad_translations": [],
+      "bad_translations": [
+        "Poposha"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -875,7 +958,9 @@
     {
       "source_cn": "洛塔",
       "target_en": "Lotta",
-      "bad_translations": [],
+      "bad_translations": [
+        "Luota"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -884,7 +969,20 @@
     {
       "source_cn": "洛贝拉",
       "target_en": "Robella",
-      "bad_translations": [],
+      "bad_translations": [
+        "Luobela"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "海伦",
+      "target_en": "Helen",
+      "bad_translations": [
+        "Helen"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -902,9 +1000,33 @@
       "notes": "Third-generation Doll / story entity"
     },
     {
+      "source_cn": "清道夫",
+      "target_en": "Sweeper",
+      "bad_translations": [
+        "Scavenger"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Nyxie's Sangvis Ferri Doll name"
+    },
+    {
       "source_cn": "玛绮朵",
       "target_en": "Makkiato",
-      "bad_translations": [],
+      "bad_translations": [
+        "Machido"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "琳德",
+      "target_en": "Lind",
+      "bad_translations": [
+        "Linde"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -951,7 +1073,9 @@
     {
       "source_cn": "米什缇",
       "target_en": "Mechty",
-      "bad_translations": [],
+      "bad_translations": [
+        "Mishti"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -996,7 +1120,9 @@
     {
       "source_cn": "绯",
       "target_en": "Faye",
-      "bad_translations": [],
+      "bad_translations": [
+        "Fei"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1005,7 +1131,9 @@
     {
       "source_cn": "维克托",
       "target_en": "Vector",
-      "bad_translations": [],
+      "bad_translations": [
+        "Victor"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1014,7 +1142,9 @@
     {
       "source_cn": "维尔德",
       "target_en": "Welrod",
-      "bad_translations": [],
+      "bad_translations": [
+        "Welder"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1023,7 +1153,20 @@
     {
       "source_cn": "维普蕾",
       "target_en": "Vepley",
-      "bad_translations": [],
+      "bad_translations": [
+        "Vipre"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "罗蕾莱",
+      "target_en": "Loreley",
+      "bad_translations": [
+        "Lorelei"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1032,7 +1175,9 @@
     {
       "source_cn": "芙洛伦",
       "target_en": "Florence",
-      "bad_translations": [],
+      "bad_translations": [
+        "Floren"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1041,7 +1186,9 @@
     {
       "source_cn": "莉塔拉",
       "target_en": "Littara",
-      "bad_translations": [],
+      "bad_translations": [
+        "Litara"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1059,7 +1206,9 @@
     {
       "source_cn": "莱妮",
       "target_en": "Lainie",
-      "bad_translations": [],
+      "bad_translations": [
+        "Laini"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1068,7 +1217,9 @@
     {
       "source_cn": "莱娅",
       "target_en": "Leva",
-      "bad_translations": [],
+      "bad_translations": [
+        "Laia"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1077,7 +1228,9 @@
     {
       "source_cn": "莱娜",
       "target_en": "Lenna",
-      "bad_translations": [],
+      "bad_translations": [
+        "Laina"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1086,7 +1239,9 @@
     {
       "source_cn": "闪电",
       "target_en": "Groza",
-      "bad_translations": [],
+      "bad_translations": [
+        "Lightning"
+      ],
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
@@ -1138,6 +1293,82 @@
       "notes": "Hydro damage"
     },
     {
+      "source_cn": "刘莳",
+      "target_en": "Liushih",
+      "bad_translations": [
+        "Liu Shi"
+      ],
+      "exclusions": [],
+      "category": "Doll",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "寇尔芙·镜刻",
+      "target_en": "Colphne Doppelganger",
+      "bad_translations": [
+        "Corfu Mirror-Carver",
+        "Colf·Mirror Carving",
+        "Colphne - Mirrorcarver",
+        "Colphne - Speculum",
+        "Colphne: Speculum",
+        "Colphne: Mirrorprint"
+      ],
+      "exclusions": [],
+      "category": "Doll",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "希丽雅",
+      "target_en": "Cecilia",
+      "bad_translations": [
+        "Celia"
+      ],
+      "exclusions": [],
+      "category": "Doll",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "蔻尔芙·镜刻",
+      "target_en": "Colphne Doppelganger",
+      "bad_translations": [
+        "Corfu Mirror-Carver",
+        "Colf·Mirror Carving",
+        "Colphne - Mirrorcarver",
+        "Colphne - Speculum",
+        "Colphne: Speculum",
+        "Colphne: Mirrorprint"
+      ],
+      "exclusions": [],
+      "category": "Doll",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "吉拉尔",
+      "target_en": "Girard",
+      "bad_translations": [
+        "Gilard"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Girard"
+    },
+    {
+      "source_cn": "奥尔劳格财团",
+      "target_en": "Orlog Conglomerate",
+      "bad_translations": [
+        "Orlaug Foundation"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate"
+    },
+    {
       "source_cn": "新苏联",
       "target_en": "Neo-Soviet",
       "bad_translations": [
@@ -1149,6 +1380,22 @@
       "notes": "Neo-Soviet Union"
     },
     {
+      "source_cn": "法本集团",
+      "target_en": "FABN Group",
+      "bad_translations": [
+        "Faben Group",
+        "Farben Group",
+        "Faben group",
+        "Farben group"
+      ],
+      "exclusions": [
+        "赛诺菲与法本集团"
+      ],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate"
+    },
+    {
       "source_cn": "罗克萨特主义合众国联盟",
       "target_en": "URNC",
       "bad_translations": [
@@ -1158,6 +1405,21 @@
       "category": "Factions",
       "speaker_context": "Any",
       "notes": "Union of Rossartrist Nations Coalition"
+    },
+    {
+      "source_cn": "赛诺菲与法本集团",
+      "target_en": "Cecht FABN",
+      "bad_translations": [
+        "Sanofi and Farben Group",
+        "Sanofi and Faben Group",
+        "Sanofi and Farben",
+        "Sanofi-Farben Group",
+        "Sanofi-Farben"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate"
     },
     {
       "source_cn": "铁血",
@@ -1224,7 +1486,9 @@
     {
       "source_cn": "净化区",
       "target_en": "Purified Zone",
-      "bad_translations": [],
+      "bad_translations": [
+        "Decontamination Zone"
+      ],
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
@@ -1338,6 +1602,277 @@
       "category": "Lore / Tech",
       "speaker_context": "Any",
       "notes": "Gun-Doll synchronization link"
+    },
+    {
+      "source_cn": "伊菲",
+      "target_en": "Iphi",
+      "bad_translations": [
+        "Ifi"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "佩妮泽",
+      "target_en": "Poludnitsa",
+      "bad_translations": [
+        "Penize"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "奇洛薇格",
+      "target_en": "Chiloveig",
+      "bad_translations": [
+        "Kelower",
+        "Chiloveg"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Paradeus"
+    },
+    {
+      "source_cn": "希尔",
+      "target_en": "Sier",
+      "bad_translations": [
+        "Hill"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "德尔",
+      "target_en": "Dier",
+      "bad_translations": [
+        "Dell"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "柯尼",
+      "target_en": "Kenny",
+      "bad_translations": [
+        "Connie",
+        "Conny"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "欧菲露妮",
+      "target_en": "Ophelune",
+      "bad_translations": [
+        "Ofeline",
+        "Ofiloni",
+        "Orperune"
+      ],
+      "exclusions": [
+        "欧菲露妮小姐"
+      ],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "accord to IOP her name will Orphelune, but we use Botzu is translated"
+    },
+    {
+      "source_cn": "欧菲露妮小姐",
+      "target_en": "Miss Ophelune",
+      "bad_translations": [
+        "Miss Ophelia"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Igia talk to Orphelune",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "沈美玲",
+      "target_en": "Mayling Shen",
+      "bad_translations": [
+        "Shen Meiling"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "瓦西尔",
+      "target_en": "Vasily",
+      "bad_translations": [
+        "Wassell"
+      ],
+      "exclusions": [
+        "瓦西尔·普加乔夫"
+      ],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Mokosh"
+    },
+    {
+      "source_cn": "知穗",
+      "target_en": "Zhisui",
+      "bad_translations": [
+        "Zhi Sui"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Tactical Doll name"
+    },
+    {
+      "source_cn": "美玲",
+      "target_en": "Mayling",
+      "bad_translations": [
+        "Meiling",
+        "Mirei"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "赫利",
+      "target_en": "Heli",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC"
+    },
+    {
+      "source_cn": "夏日投手",
+      "target_en": "Summer Pitcher",
+      "bad_translations": [
+        "Summer Pitcher"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "樱花",
+      "target_en": "Sakura",
+      "bad_translations": [
+        "Cherry Blossom"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "睡醒的人鱼",
+      "target_en": "Stirring Mermaid",
+      "bad_translations": [
+        "Awakened Mermaid"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "绀星绮愿",
+      "target_en": "Indigo Oath",
+      "bad_translations": [
+        "Starry Wish"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "蔚蓝轨迹",
+      "target_en": "Cerulean Breaker",
+      "bad_translations": [
+        "Azure Trajectory"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "赛场火花",
+      "target_en": "Sparks On The Circuit",
+      "bad_translations": [
+        "Arena Spark"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "跃行脱兔",
+      "target_en": "Prancing Bunny",
+      "bad_translations": [
+        "Leaping Hare"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "速度之星",
+      "target_en": "Speed ​​Star",
+      "bad_translations": [
+        "Speed ​​Star"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "闪耀心愿",
+      "target_en": "Sparkling Wish",
+      "bad_translations": [
+        "Shining Wish"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "静谧暗河",
+      "target_en": "Serene Dark River",
+      "bad_translations": [
+        "Silent Dark River"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
+    },
+    {
+      "source_cn": "黎明战役",
+      "target_en": "Dawn of Battle",
+      "bad_translations": [
+        "Dawn Battle"
+      ],
+      "exclusions": [],
+      "category": "Outfit",
+      "speaker_context": "Any",
+      "notes": "Costumes"
     },
     {
       "source_cn": "艾莫",

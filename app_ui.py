@@ -882,7 +882,7 @@ class GFL2TranslatorApp(tk.Tk):
         self.chunks_listbox.delete(0, tk.END)
         chunks_dir = DEFAULT_OUTPUT_DIR / "untranslated_chunks"
         if chunks_dir.exists():
-            files = sorted(chunks_dir.glob("chunk_*.json"))
+            files = sorted(chunks_dir.glob("*.json"))
             for f in files:
                 self.chunks_listbox.insert(tk.END, f.name)
         if self.chunks_listbox.size() > 0:

@@ -15,7 +15,7 @@ With every update, `LangPackageTableCnData.bytes` shifts and renumbers numerical
 A **Translation Memory (TM)** system backed by a local SQLite database (`translation_memory.db`). It maps original Chinese strings directly to their verified English translations, ignoring numerical table IDs.
 * Matches **>96% of game text in under 1 second** on update day.
 * Isolates new untranslated strings into bite-sized ~250-line JSON chunks for AI / ChatGPT translation.
-* Enforces canonical GFL2 lore terminology via a database-driven Lore Glossary.
+* Enforces canonical GFL2 lore terminology via a database-driven Lore Glossary (currently 183 active rules).
 
 ---
 
@@ -25,7 +25,7 @@ A **Translation Memory (TM)** system backed by a local SQLite database (`transla
    * Do NOT introduce `pip install` packages (e.g., do not require `pandas`, `customtkinter`, `requests`, etc.).
    * GUI is built using built-in `tkinter` and `ttk` with custom dark styling.
 2. **Database Management**:
-   * Database file: `translation_memory.db` (~129 MB, SQLite in WAL mode, contains ~269,000+ translations and 143 lore rules).
+   * Database file: `translation_memory.db` (~129 MB, SQLite in WAL mode, contains ~269,278 translations and 183 lore rules).
    * **DO NOT track or commit `translation_memory.db` to Git** (GitHub has a 100 MB hard limit). It is ignored via `.gitignore`.
    * The user backs up and shares the database via Google Drive.
 3. **Workspace Protection**:
@@ -41,7 +41,7 @@ langpackage_scripts/
 ├── .agents/
 │   └── PROJECT_CONTEXT.md          # THIS FILE (AI Agent Memory & Context)
 ├── database_source/
-│   └── glossary.json               # 143 official lore terms & bad translation rules
+│   └── glossary.json               # 183 official lore terms & bad translation rules
 ├── docs/
 │   ├── BUILD_DATABASE_FROM_BYTES.md# Offline setup guide from matching CN+EN .bytes
 │   ├── GUIDE.md                    # Complete 20-day patch operational manual
@@ -73,13 +73,13 @@ Built with `tkinter` and `ttk` using an anime sci-fi dark theme (`#121218`).
 * **5 Dedicated Tabs**:
   1. `🔄 20-Day Patch Updater`: 1-click full pipeline (Export $\to$ Sync $\to$ Lore Auto-Fix $\to$ Binary Rebuild).
   2. `📦 First-Time Setup`: Builds `translation_memory.db` from matching CN and EN `.bytes` files.
-  3. `🛡️ Lore Glossary`: Searchable Treeview of 143 terms, modal term creator, Audit & Auto-fix button, JSON Export/Import.
-  4. `🧩 Untranslated Chunks`: Lists ~250-line chunks, 1-click "Copy for ChatGPT", single and batch chunk importer.
+  3. `🛡️ Lore Glossary`: Searchable Treeview of 183 terms, modal term creator, Audit & Auto-fix button, JSON Export/Import.
+  4. `🧩 Untranslated Chunks`: Lists any `*.json` chunks in `output/untranslated_chunks/`, 1-click "Copy for ChatGPT", and chunk importer.
   5. `⚙️ Database & Backup`: Live stats card, ZIP backup, JSON export, SQLite `VACUUM` optimizer.
 
 ---
 
-## 🛡️ 5. Lore Glossary Mechanics (`apply_glossary.py`)
+## 🛡️ 5. Lore Glossary Mechanics & Exclusions (`apply_glossary.py`)
 Protects against recurring AI/machine translation mistranslations:
 * Example: `星痕` $\to$ AI translates as `Star Abyss` $\to$ Auto-fixed to official canon **`Ateraxis`**.
 * Example: `铁血` $\to$ AI translates as `Iron Blood` $\to$ Auto-fixed to **`Sangvis Ferri`**.
@@ -89,15 +89,41 @@ Protects against recurring AI/machine translation mistranslations:
 1. **Target English Only**: The original Chinese text (`source_cn`) is NEVER modified. The glossary only inspects and fixes English text (`target_en`).
 2. **Chinese Guard**: Only searches for banned English words if the original Chinese sentence actually contains the Chinese keyword (`source_cn LIKE '%keyword%'`).
 3. **Word Boundary Safeguard (`\b`)**: All bad translations are searched using `\b{banned_term}\b`. This ensures normal English words are never damaged (e.g. `\bLandin\b` will **never** match or corrupt `landing`).
-4. **Community Glossary Update**: Recently expanded with 112 T-Doll names from Discord (total 143 terms). Four historical typos were resolved:
-   * `人形莱娅` $\to$ `T-Doll Leva` (was swapped)
-   * `人形莱娜` $\to$ `T-Doll Lenna` (was swapped)
-   * `人形六分仪` $\to$ `T-Doll Sextans` (fixed missing 's')
-   * `莫辛纳甘` $\to$ `Mosin-Nagant` (canonical hyphenation)
+4. **Exclusions (`exclusions`)**:
+   * If any string in `exclusions` is found in the Chinese sentence, the auto-fixer **skips that sentence completely**.
+   * **Title/Context Guard**: `欧菲露妮` $\to$ `Ophelune` with exclusion `["欧菲露妮小姐"]`. This ensures maid Igia's respectful address `Young Mistress` is 100% protected and never overwritten.
+   * **Hierarchical Faction Guard**: `法本集团` $\to$ `FABN Group` with exclusion `["赛诺菲与法本集团"]`. This ensures the longer name `赛诺菲与法本集团` $\to$ `Cecht FABN` is cleanly applied without partial conflict.
+5. **Community Glossary (183 Terms)**:
+   * Expanded with 112 T-Doll names from Discord.
+   * Historical typos resolved: `人形莱娅` $\to$ `T-Doll Leva`, `人形莱娜` $\to$ `T-Doll Lenna`, `人形六分仪` $\to$ `T-Doll Sextans`, `莫辛纳甘` $\to$ `Mosin-Nagant`.
 
 ---
 
-## 🚀 6. Routine Patch Update Flow (Quick Reference)
+## 🧩 6. Untranslated Chunks & Importer Format
+When importing chunks via Tab 4 (`Import Selected Chunk`):
+* **Core Rule**: The JSON **Key** must be the original Chinese text, and the **Value** must be the English translation.
+* **Standard Format**:
+  ```json
+  {
+    "translations": {
+      "原版中文文本": "English translated text"
+    }
+  }
+  ```
+* Importer also accepts flat `{ "中文": "English" }` or `{ "texts": { ... } }`.
+* Automatically strips markdown fences (```` ```json ````) if copied directly from ChatGPT.
+* Skips any values that are empty `""` or identical to Chinese.
+
+---
+
+## 🔍 7. Database Status & Past Patch Oddities
+* **Total Translations**: 269,278 lines.
+* **Untranslated in Chinese**: Only 36 lines remain untranslated in the entire database (99.985% fully translated).
+* **The Cecilia Story Quirk**: In a past patch, Mica Team added single characters (e.g. `落入` $\to$ `落入了`, and `劝阻` $\to$ `鼓动`). Because exact string matching is used, this created 4 untranslated entries (Rows 10442, 10443, 10444, 125821). These have been fully matched and updated with their official English text in `translation_memory.db`.
+
+---
+
+## 🚀 8. Routine Patch Update Flow (Quick Reference)
 When a 20-day patch drops:
 1. Drop the new update's `LangPackageTableCnData.bytes` into the root directory.
 2. Launch `run_ui.bat`.
@@ -105,6 +131,6 @@ When a 20-day patch drops:
 4. Click **🚀 RUN FULL UPDATE PIPELINE**.
 5. If untranslated strings exist:
    * Go to Tab 4 (`🧩 Untranslated Chunks`).
-   * Copy chunk $\to$ Translate with ChatGPT $\to$ Import chunk back.
+   * Copy chunk $\to$ Translate with ChatGPT $\to$ Save in file $\to$ Click Import.
    * Click Rebuild in Tab 1.
 6. Copy the resulting `output/LangPackageTableCnData.bytes` into the game directory. Done!
