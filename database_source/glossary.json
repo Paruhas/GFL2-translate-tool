@@ -1,9 +1,18 @@
 {
-  "total_terms": 30,
+  "total_terms": 143,
   "glossary": [
     {
+      "source_cn": "乌尔丽德",
+      "target_en": "Ullrid",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
       "source_cn": "乔扎",
-      "target_en": "Joeza",
+      "target_en": "Jawza",
       "bad_translations": [
         "Josa",
         "Qiaoza"
@@ -12,6 +21,609 @@
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Story character"
+    },
+    {
+      "source_cn": "人形OTs-14",
+      "target_en": "T-Doll OTs-14",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形乌尔丽德",
+      "target_en": "T-Doll Ullrid",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形代理人",
+      "target_en": "T-Doll Agent",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形伊格蕾塔",
+      "target_en": "T-Doll Igreta",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形佩莉",
+      "target_en": "T-Doll Peri",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形佩里缇亚",
+      "target_en": "T-Doll Peritya",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形克罗丽科",
+      "target_en": "T-Doll Krolik",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形克莱妲",
+      "target_en": "T-Doll Koleda",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形六分仪",
+      "target_en": "T-Doll Sextans",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形刘易斯",
+      "target_en": "T-Doll Lewis",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形刘莳",
+      "target_en": "T-Doll Liushih",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形可露凯",
+      "target_en": "T-Doll Klukai",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形哈卜茜",
+      "target_en": "T-Doll Harpsy",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形埃芙",
+      "target_en": "T-Doll Alva",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形塞布丽娜",
+      "target_en": "T-Doll Sabrina",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形夏克里",
+      "target_en": "T-Doll Sharkry",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形夏安",
+      "target_en": "T-Doll Cheyanne",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形奇塔",
+      "target_en": "T-Doll Cheeta",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形妮基塔",
+      "target_en": "T-Doll Nikketa",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形威玛西娜",
+      "target_en": "T-Doll Voymastina",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形安朵丝",
+      "target_en": "T-Doll Andoris",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形寇尔芙",
+      "target_en": "T-Doll Colphne",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形寇尔芙·镜刻",
+      "target_en": "T-Doll Colphen Gnosis",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形巴希达",
+      "target_en": "T-Doll Balthilde",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形希丽雅",
+      "target_en": "T-Doll Cecilia",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形幼熙",
+      "target_en": "T-Doll Yoohee",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形托洛洛",
+      "target_en": "T-Doll Tololo",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形春田",
+      "target_en": "T-Doll Springfield",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形朝晖",
+      "target_en": "T-Doll Zhaohui",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形杜莎妮",
+      "target_en": "T-Doll Dushevnaya",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形桑朵莱希",
+      "target_en": "T-Doll Centaureissi",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形樱花",
+      "target_en": "T-Doll Sakura",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形比悠卡",
+      "target_en": "T-Doll Belka",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形波波沙",
+      "target_en": "T-Doll Papasha",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形洛塔",
+      "target_en": "T-Doll Lotta",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形洛贝拉",
+      "target_en": "T-Doll Robella",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形海伦",
+      "target_en": "T-Doll Helen",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形玛绮朵",
+      "target_en": "T-Doll Makiatto",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形琳德",
+      "target_en": "T-Doll Lind",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形琼玖",
+      "target_en": "T-Doll Qiongjiu",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形秋桦",
+      "target_en": "T-Doll Qiuhua",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形科谢尼娅",
+      "target_en": "T-Doll Ksenia",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形米什缇",
+      "target_en": "T-Doll Mechty",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形米蒂尔",
+      "target_en": "T-Doll Mityl",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形索普",
+      "target_en": "T-Doll Soppo",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形索米",
+      "target_en": "T-Doll Suomi",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形纳甘",
+      "target_en": "T-Doll Nagant",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形纳美西丝",
+      "target_en": "T-Doll Nemesis",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形纳美西丝·衍光",
+      "target_en": "T-Doll Nemesis Gnosis",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形绛雨",
+      "target_en": "T-Doll Jiangyu",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形绯",
+      "target_en": "T-Doll Faye",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形维克托",
+      "target_en": "T-Doll Vector",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形维尔德",
+      "target_en": "T-Doll Welrod",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形维普蕾",
+      "target_en": "T-Doll Vepley",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形罗蕾莱",
+      "target_en": "T-Doll Loreley",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形翡图萨",
+      "target_en": "T-Doll Phaetusa",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形芙洛伦",
+      "target_en": "T-Doll Florence",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形芙铃",
+      "target_en": "T-Doll Faelynn",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形莉塔拉",
+      "target_en": "T-Doll Littara",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形莫辛纳甘",
+      "target_en": "T-Doll Mosin-Nagant",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形莱妮",
+      "target_en": "T-Doll Lainie",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形莱娅",
+      "target_en": "T-Doll Leva",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形莱娜",
+      "target_en": "T-Doll Lenna",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形贝丝蒂",
+      "target_en": "T-Doll Basti",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形闪电",
+      "target_en": "T-Doll Groza",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形阿斯缇亚",
+      "target_en": "T-Doll Asteria",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
+    },
+    {
+      "source_cn": "人形黛烟",
+      "target_en": "T-Doll Daiyan",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll title"
     },
     {
       "source_cn": "佩切涅格",
@@ -23,6 +635,42 @@
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Tactical Doll (PKP)"
+    },
+    {
+      "source_cn": "佩莉",
+      "target_en": "Peri",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "佩里缇亚",
+      "target_en": "Peritya",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "克罗丽科",
+      "target_en": "Krolik",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "克莱妲",
+      "target_en": "Koleda",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
     },
     {
       "source_cn": "六分仪",
@@ -49,6 +697,152 @@
       "notes": "Doll Sextans address"
     },
     {
+      "source_cn": "兰汀",
+      "target_en": "Lentine",
+      "bad_translations": [
+        "Landin"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Adjutant Lentine without Adjutant"
+    },
+    {
+      "source_cn": "可露凯",
+      "target_en": "Klukai",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "塞布丽娜",
+      "target_en": "Sabrina",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "夏克里",
+      "target_en": "Sharkry",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "奇塔",
+      "target_en": "Cheeta",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "妮基塔",
+      "target_en": "Nikketa",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "威玛西娜",
+      "target_en": "Voymastina",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "安朵丝",
+      "target_en": "Andoris",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "安朵斯",
+      "target_en": "Andoris",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "寇尔芙",
+      "target_en": "Colphne",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "巴希达",
+      "target_en": "Balthilde",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "幼熙",
+      "target_en": "YooHee",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "托洛洛",
+      "target_en": "Tololo",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "春田",
+      "target_en": "Springfield",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "朝晖",
+      "target_en": "Zhaohui",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "杜莎妮",
+      "target_en": "Dushevnaya",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
       "source_cn": "桑朵莱希",
       "target_en": "Centaureissi",
       "bad_translations": [
@@ -59,6 +853,42 @@
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Tactical Doll (G36)"
+    },
+    {
+      "source_cn": "比悠卡",
+      "target_en": "Belka",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "波波沙",
+      "target_en": "Papasha",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "洛塔",
+      "target_en": "Lotta",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "洛贝拉",
+      "target_en": "Robella",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
     },
     {
       "source_cn": "海伦娜",
@@ -72,6 +902,33 @@
       "notes": "Third-generation Doll / story entity"
     },
     {
+      "source_cn": "玛绮朵",
+      "target_en": "Makkiato",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "琼玖",
+      "target_en": "QiongJiu",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "秋桦",
+      "target_en": "Qiuhua",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
       "source_cn": "科德韦尔",
       "target_en": "Caldwell",
       "bad_translations": [
@@ -83,8 +940,161 @@
       "notes": "Key story researcher"
     },
     {
+      "source_cn": "科谢妮亚",
+      "target_en": "Ksenia",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "米什缇",
+      "target_en": "Mechty",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "索米",
+      "target_en": "Suomi",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "纳甘",
+      "target_en": "Nagant",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "纳美西丝",
+      "target_en": "Nemesis",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "绛雨",
+      "target_en": "Jiangyu",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "绯",
+      "target_en": "Faye",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "维克托",
+      "target_en": "Vector",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "维尔德",
+      "target_en": "Welrod",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "维普蕾",
+      "target_en": "Vepley",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "芙洛伦",
+      "target_en": "Florence",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "莉塔拉",
+      "target_en": "Littara",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "莫辛纳甘",
+      "target_en": "Mosin-Nagant",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "莱妮",
+      "target_en": "Lainie",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "莱娅",
+      "target_en": "Leva",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "莱娜",
+      "target_en": "Lenna",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
+      "source_cn": "闪电",
+      "target_en": "Groza",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name"
+    },
+    {
       "source_cn": "黑眼",
-      "target_en": "Black Eye",
+      "target_en": "Darture",
       "bad_translations": [
         "Dark Eye"
       ],
@@ -103,6 +1113,18 @@
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Tactical Doll (Type 95)"
+    },
+    {
+      "source_cn": "人形",
+      "target_en": "T-Doll",
+      "bad_translations": [
+        "Doll",
+        "Android"
+      ],
+      "exclusions": [],
+      "category": "Concept",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll classification"
     },
     {
       "source_cn": "浊刻伤害",
