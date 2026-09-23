@@ -1,5 +1,5 @@
 {
-  "total_terms": 183,
+  "total_terms": 190,
   "glossary": [
     {
       "source_cn": "乌尔丽德",
@@ -1660,6 +1660,18 @@
       "notes": "NPC"
     },
     {
+      "source_cn": "朗尼",
+      "target_en": "Lonnie",
+      "bad_translations": [
+        "Ronnie",
+        "Rooney"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Mangi Security"
+    },
+    {
       "source_cn": "柯尼",
       "target_en": "Kenny",
       "bad_translations": [
@@ -1669,7 +1681,7 @@
       "exclusions": [],
       "category": "NPC",
       "speaker_context": "Any",
-      "notes": "NPC"
+      "notes": "NPC - Mangi Security"
     },
     {
       "source_cn": "欧菲露妮",
@@ -1873,6 +1885,70 @@
       "category": "Outfit",
       "speaker_context": "Any",
       "notes": "Costumes"
+    },
+    {
+      "source_cn": "乐园计划",
+      "target_en": "Project Eden",
+      "bad_translations": [
+        "Theme Park Plan"
+      ],
+      "exclusions": [],
+      "category": "Projects",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate's Projects"
+    },
+    {
+      "source_cn": "冕洞计划",
+      "target_en": "Project Coronal Hole",
+      "bad_translations": [
+        "Crown Cave Project"
+      ],
+      "exclusions": [],
+      "category": "Projects",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate's Projects"
+    },
+    {
+      "source_cn": "恒星风计划",
+      "target_en": "Project Nebula Wind",
+      "bad_translations": [
+        "Stellar Wind Project"
+      ],
+      "exclusions": [],
+      "category": "Projects",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate's Projects"
+    },
+    {
+      "source_cn": "摇篮曲计划",
+      "target_en": "Lullaby Project",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Projects",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate's Projects"
+    },
+    {
+      "source_cn": "泊维西计划",
+      "target_en": "Powehi Plan",
+      "bad_translations": [
+        "Povixi Project"
+      ],
+      "exclusions": [],
+      "category": "Projects",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate's Projects"
+    },
+    {
+      "source_cn": "霍洛戈计划",
+      "target_en": "Horoscope Program",
+      "bad_translations": [
+        "Project Hollogo"
+      ],
+      "exclusions": [],
+      "category": "Projects",
+      "speaker_context": "Any",
+      "notes": "Orlog Conglomerate's Projects"
     },
     {
       "source_cn": "艾莫",
