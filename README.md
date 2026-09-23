@@ -15,12 +15,10 @@ A complete, high-performance localization maintenance toolkit for **Girls' Front
 * **Database**: SQLite3 (Pre-bundled with Python standard library — **no database server installation needed**)
 * *(Optional Database GUI)*: **[DBeaver](https://dbeaver.io/)** or **[DB Browser for SQLite](https://sqlitebrowser.org/)** (if you want a visual UI to explore `translation_memory.db`)
 
-### 2. Game Files Requirement (For New Cloners)
-To generate your personal Translation Memory database on a fresh clone, you **MUST** provide two `.bytes` files from the **SAME game version**:
-1. **Original Chinese file**: `LangPackageTableCnData_CN.bytes` (from game version X)
-2. **English translated mod file**: `LangPackageTableCnData_EN.bytes` (from the **same** game version X)
-
-Once paired, your personal database will be generated locally in ~30 seconds.
+### 2. Translation Memory Database
+To translate and update the game, you need the **Translation Memory Database** (`translation_memory.db`):
+* **🌟 Option A (Recommended)**: Download the pre-built database from Google Drive and drop it in this folder.
+* **🛠️ Option B (Build from .bytes)**: If you prefer compiling your own database from matching baseline `.bytes` files, see [`docs/BUILD_DATABASE_FROM_BYTES.md`](docs/BUILD_DATABASE_FROM_BYTES.md).
 
 ---
 
@@ -43,6 +41,7 @@ langpackage_scripts/
 ├── database_source/
 │   └── glossary.json               # Official GFL2 lore terms and substitution rules
 ├── docs/
+│   ├── BUILD_DATABASE_FROM_BYTES.md# Guide for building DB from baseline .bytes files
 │   ├── GUIDE.md                    # Detailed operational manual & patch update guide
 │   └── DISCORD_GUIDE.png           # Reference visual guide image
 ├── output/                         # Local working directory (git-ignored)
@@ -75,29 +74,24 @@ For a one-click visual experience, double-click **`run_ui.bat`** (or run `python
 
 ---
 
-## 🚀 First-Time Setup (Building Your Database)
+## 🚀 First-Time Setup
 
-If you just cloned this repository, your local `translation_memory.db` does not exist yet. Follow these steps once:
+To get started, you need the local **Translation Memory Database** (`translation_memory.db`). Choose whichever option is easiest for you:
 
-### Step 1: Place your baseline CN and EN `.bytes` files
-Place your matching Chinese and English `.bytes` files into this folder:
-* Rename Chinese file to: `LangPackageTableCnData_CN.bytes`
-* Rename English file to: `LangPackageTableCnData_EN.bytes`
+### 🌟 Option A: Download Pre-Built Database (Recommended — Instant Start!)
+1. Download **`translation_memory.db`** (or `translation_memory.zip`) from our community drive:
+   * **[📥 Download translation_memory.db from Google Drive](YOUR_GOOGLE_DRIVE_LINK_HERE)** *(Replace with your Google Drive link)*
+2. Place `translation_memory.db` directly inside this `langpackage_scripts/` folder.
+3. **You are ready!** You can skip setup completely and start updating new patches immediately by double-clicking **`run_ui.bat`**.
 
-### Step 2: Export both files to JSON
-Open PowerShell or Command Prompt in this folder and run:
-```powershell
-python langpackage_export.py LangPackageTableCnData_CN.bytes output/translations.json
-python langpackage_export.py LangPackageTableCnData_EN.bytes output/translations_eng.json
-```
+---
 
-### Step 3: Build your local Translation Memory database
-* Double-click **`run_translation_sync.bat`** (or run `python gfl2_translation_sync.py`).
-* Select **Option 1** (*Build / Seed Database from existing translations*).
-* Press **Enter** to accept the default file paths.
+### 🛠️ Option B: Build Your Own Database (From Baseline .bytes Files)
+If you prefer compiling your own database from original matching baseline `.bytes` files instead of downloading the pre-built database:
 
-> [!TIP]
-> In ~5 seconds, your personal `translation_memory.db` will be created with ~260,000+ learned translation pairs, and all lore rules from `database_source/glossary.json` will be automatically imported!
+👉 **See the complete step-by-step instructions in [`docs/BUILD_DATABASE_FROM_BYTES.md`](docs/BUILD_DATABASE_FROM_BYTES.md)**
+
+*(Supports 1-click build via Desktop UI **📦 First-Time Setup** tab, interactive terminal menu, or direct CLI commands).*
 
 ---
 
