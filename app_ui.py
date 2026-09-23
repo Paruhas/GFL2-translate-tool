@@ -394,12 +394,11 @@ class GFL2TranslatorApp(tk.Tk):
 
                 # Step 2: Match with Translation Memory
                 self.log("\n[Step 2/4] Matching against Translation Memory database...")
-                db = gfl2_translation_sync.TranslationMemory(DEFAULT_DB)
                 total, matched, untrans = gfl2_translation_sync.sync_and_translate(
-                    input_cn_path=exported_cn,
+                    new_cn_path=exported_cn,
                     output_en_path=target_en,
                     untranslated_path=untranslated_file,
-                    db=db,
+                    db_path=DEFAULT_DB,
                     auto_translate_new=False
                 )
                 ratio = (matched / total * 100) if total > 0 else 0
@@ -418,7 +417,7 @@ class GFL2TranslatorApp(tk.Tk):
                 out_file.parent.mkdir(parents=True, exist_ok=True)
                 if out_file.exists():
                     out_file.unlink()
-                tot, sup, chg = langpackage_import.import_table(in_file, target_en, out_file)
+                tot, sup, chg = langpackage_import.import_table(in_file, target_en, out_file, refresh_output=True)
                 self.log(f"✓ Successfully wrote: {out_file}")
                 self.log(f"✓ {chg:,} of {tot:,} entries updated in binary table!")
                 self.log(f"\n🎉 SUCCESS! Your playable English game file is ready:\n{out_file}")
