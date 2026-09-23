@@ -10,3 +10,4 @@ translation_memory.db*
 
 # Ignore temporary zip archives
 *.zip
+*.7z

@@ -205,3 +205,12 @@ python apply_glossary.py add "源石" "Originium" --bad "Source Stone" --categor
 * **Local Database Safety**: Your `translation_memory.db` stays strictly on your local machine and will never be overwritten or deleted by git pulls.
 * **Incremental Updates**: You can translate as few or as many chunks as you want. Any imported chunk is permanently stored in the database.
 * **Backing Up**: You can backup your database at any time by copying `translation_memory.db` or using Option 5 (*Export Database*) in `run_translation_sync.bat`.
+
+---
+
+## 5. 🖼️ Visual Guide
+
+For a quick visual overview of the Discord / community localization workflow:
+
+![Visual Guide](DISCORD_GUIDE.png)
+

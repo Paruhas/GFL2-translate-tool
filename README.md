@@ -38,22 +38,24 @@ This toolkit solves that problem using **Translation Memory (TM)**:
 
 ```text
 langpackage_scripts/
-├── [GUIDE] README.md               # Detailed operational manual & patch update guide
-├── [GUIDE] DISCORD_GUIDE.png       # Reference visual guide
-├── langpackage_export.py           # Extracts .bytes files into readable JSON
-├── langpackage_import.py           # Rebuilds translated JSON back into .bytes
-├── gfl2_translation_sync.py        # Core Translation Memory & update sync engine
-├── run_translation_sync.bat        # Double-click launcher for translation sync
-├── apply_glossary.py               # Database-driven Lore Glossary auditor & auto-fixer
-├── run_glossary.bat                # Double-click launcher for Lore Glossary manager
 ├── database_source/
 │   └── glossary.json               # Official GFL2 lore terms and substitution rules
-├── output/                         # Working directory for all generated files
+├── docs/
+│   ├── GUIDE.md                    # Detailed operational manual & patch update guide
+│   └── DISCORD_GUIDE.png           # Reference visual guide image
+├── output/                         # Local working directory (git-ignored)
 │   ├── translations_eng.json       # Generated English text matching new table IDs
 │   ├── untranslated.json           # All new untranslated lines from update
 │   ├── untranslated_chunks/        # ~250-line chunks ready for AI translation
 │   └── LangPackageTableCnData.bytes# Final ready-to-play translated game binary
-└── README.md                       # This documentation
+├── .gitignore                      # Git ignore rules
+├── apply_glossary.py               # Database-driven Lore Glossary auditor & auto-fixer
+├── gfl2_translation_sync.py        # Core Translation Memory & update sync engine
+├── langpackage_export.py           # Extracts .bytes files into readable JSON
+├── langpackage_import.py           # Rebuilds translated JSON back into .bytes
+├── README.md                       # Main GitHub project landing page
+├── run_glossary.bat                # Double-click launcher for Lore Glossary manager
+└── run_translation_sync.bat        # Double-click launcher for translation sync
 ```
 
 ---
@@ -88,7 +90,7 @@ python langpackage_export.py LangPackageTableCnData_EN.bytes output/translations
 
 For detailed step-by-step instructions on updating the game every 20 days, translating new chunks with AI, and managing the Lore Glossary, please consult the complete manual:
 
-👉 **See [`[GUIDE] README.md`](file:///C:/Users/Paruhas.c/Downloads/langpackage_scripts/%5BGUIDE%5D%20README.md)** for:
+👉 **See [`docs/GUIDE.md`](docs/GUIDE.md)** for:
 * **Patch Update Workflow**: Detailed 5-step routine for each 20-day game update.
 * **AI Translation Guide**: How to translate new strings using ChatGPT, Claude, or Google Translate.
 * **Lore Glossary & Rulebook**: Complete table of enforced lore terms (`Ateraxis`, `Sangvis Ferri`, `the Elmo`, `Sextans`, `Your Excellency`, etc.) and how to add new terms.
