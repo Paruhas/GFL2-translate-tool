@@ -7,8 +7,8 @@ echo         GFL2 LORE GLOSSARY MANAGER (DATABASE-DRIVEN)
 echo =================================================================
 echo   1. Audit ^& Auto-Fix Mistranslations (Database ^& translations_eng.json)
 echo   2. View all Glossary Terms in Database
-echo   3. Export Glossary to glossary.json
-echo   4. Import Glossary from glossary.json
+echo   3. Export Glossary to database_source\glossary.json
+echo   4. Import Glossary from database_source\glossary.json
 echo   5. Exit
 echo =================================================================
 set /p choice=Select an option (1-5): 

@@ -1,181 +1,117 @@
-# GFL2 Translation Memory & Sync Toolkit
+# GFL2 Translation Memory & Update Sync Toolkit
 
-A complete, high-performance translation management suite for **Girls' Frontline 2: Exilium (GFL2)** localization files (`LangPackageTableCnData.bytes`).
+A complete, high-performance localization maintenance toolkit for **Girls' Frontline 2: Exilium (GFL2)** game packages (`LangPackageTableCnData.bytes`).
+
+---
+
+## 📋 Requirements & Prerequisites
+
+> [!IMPORTANT]
+> This repository contains **open-source code and tooling only**. To keep the repository lightweight and respect intellectual property, no proprietary game binaries or translation databases are hosted here.
+
+### 1. System Requirements
+* **Operating System**: Windows 10 / 11
+* **Python**: Python 3.10 or higher (Uses Python standard library only; **no `pip install` required**)
+
+### 2. Game Files Requirement (For New Cloners)
+To generate your personal Translation Memory database on a fresh clone, you **MUST** provide two `.bytes` files from the **SAME game version**:
+1. **Original Chinese file**: `LangPackageTableCnData_CN.bytes` (from game version X)
+2. **English translated mod file**: `LangPackageTableCnData_EN.bytes` (from the **same** game version X)
+
+Once paired, your personal database will be generated locally in ~30 seconds.
 
 ---
 
 ## 📖 Overview & Purpose
 
-When GFL2 updates, the internal table IDs and row indexes in `LangPackageTableCnData.bytes` frequently change, shift, or get reordered. Previously, this broke older translated files and forced translators to re-translate from scratch.
+Whenever GFL2 receives an update (roughly every 20 days), the internal table IDs and row indexes inside `LangPackageTableCnData.bytes` shift and reorder. Direct ID-based replacement breaks older translation files.
 
-This toolkit solves that problem by using **Translation Memory (TM)**:
-* **String-Based Matching:** Matches Chinese text directly against a persistent database, ignoring shifting ID numbers.
-* **Instant Re-use:** Re-applies over **96% of existing translations in under 1 second** across game updates.
-* **Smart Delta Detection:** Automatically isolates only the brand-new or updated Chinese lines.
-* **Flexible Translation Workflows:** Allows automatic translation, AI/ChatGPT chunking, or direct assistant translation.
-* **Permanent Learning:** Every newly translated string is saved to the database so you never have to translate it again.
+This toolkit solves that problem using **Translation Memory (TM)**:
+* **String-Based Matching**: Matches Chinese text directly against a local SQLite database, ignoring shifting numerical table IDs.
+* **Instant Re-use**: Matches **>96% of existing translations in under 1 second** on patch day.
+* **Smart Delta Detection**: Isolates only brand-new Chinese strings and splits them into bite-sized 250-line chunks for AI / ChatGPT translation.
+* **Database-Driven Lore Glossary**: Automatically prevents and auto-fixes recurring machine translation mistakes (`Star Abyss` → `Ateraxis`, `Iron Blood` → `Sangvis Ferri`, `Emmo` → `the Elmo`, `Sextant` → `Sextans`, generic `sir` → `Your Excellency`).
 
 ---
 
-## 📂 File Structure
+## 📂 Repository Structure
 
 ```text
 langpackage_scripts/
-├── LangPackageTableCnData.bytes   # The untouched Chinese file from the game update
-├── langpackage_export.py           # Extracts .bytes into translations.json
-├── gfl2_translation_sync.py        # Core Translation Memory & synchronization engine
-├── run_translation_sync.bat        # Double-click launcher with interactive menu
+├── [GUIDE] README.md               # Detailed operational manual & patch update guide
+├── [GUIDE] DISCORD_GUIDE.png       # Reference visual guide
+├── langpackage_export.py           # Extracts .bytes files into readable JSON
+├── langpackage_import.py           # Rebuilds translated JSON back into .bytes
+├── gfl2_translation_sync.py        # Core Translation Memory & update sync engine
+├── run_translation_sync.bat        # Double-click launcher for translation sync
 ├── apply_glossary.py               # Database-driven Lore Glossary auditor & auto-fixer
-├── run_glossary.bat                # Double-click launcher for Lore Glossary Manager
-├── glossary.json                   # Exported / editable lore glossary and rulebook
-├── translation_memory.db          # SQLite database (stores translations & glossary table)
-├── translations.json              # Extracted Chinese texts (with new IDs)
-├── langpackage_import.py           # Rebuilds translated JSON into .bytes
-└── output/
-    ├── translations_eng.json      # Generated translated English texts (matches new IDs)
-    ├── untranslated.json          # Full list of new untranslated strings from update
-    ├── untranslated_chunks/       # Bite-sized JSON files (~250 lines each) for AI translation
-    └── LangPackageTableCnData.bytes # Final translated game file ready to play!
+├── run_glossary.bat                # Double-click launcher for Lore Glossary manager
+├── database_source/
+│   └── glossary.json               # Official GFL2 lore terms and substitution rules
+├── output/                         # Working directory for all generated files
+│   ├── translations_eng.json       # Generated English text matching new table IDs
+│   ├── untranslated.json           # All new untranslated lines from update
+│   ├── untranslated_chunks/        # ~250-line chunks ready for AI translation
+│   └── LangPackageTableCnData.bytes# Final ready-to-play translated game binary
+└── README.md                       # This documentation
 ```
 
 ---
 
-## 🚀 Quick Start Guide (Step-by-Step)
+## 🚀 First-Time Setup (Building Your Database)
 
-Whenever the game receives an update, follow these simple steps:
+If you just cloned this repository, your local `translation_memory.db` does not exist yet. Follow these steps once:
 
-### Step 1: Place the New Chinese File
-Copy the new `LangPackageTableCnData.bytes` from your game update into this folder:
-`C:\Users\Paruhas.c\Downloads\langpackage_scripts\`
+### Step 1: Place your baseline CN and EN `.bytes` files
+Place your matching Chinese and English `.bytes` files into this folder:
+* Rename Chinese file to: `LangPackageTableCnData_CN.bytes`
+* Rename English file to: `LangPackageTableCnData_EN.bytes`
 
----
+### Step 2: Export both files to JSON
+Open PowerShell or Command Prompt in this folder and run:
+```powershell
+python langpackage_export.py LangPackageTableCnData_CN.bytes output/translations.json
+python langpackage_export.py LangPackageTableCnData_EN.bytes output/translations_eng.json
+```
 
-### Step 2: Export Text to JSON
-Double-click **`langpackage_export.py`** (or run `python langpackage_export.py`).  
-* This extracts the game package and produces **`translations.json`** with the update's new table IDs.
-* Press Enter to close when it completes.
-
----
-
-### Step 3: Match Previous Translations
-Double-click **`run_translation_sync.bat`** (or run `python gfl2_translation_sync.py`):
-1. Select **Option 2** (*Sync New Update*).
-2. Press **Enter** to accept default paths (outputs directly to `output/`).
-3. **What happens:**
-   * It matches existing phrases from the database in **< 1 second**.
-   * It creates **`output/translations_eng.json`** (already ~96% translated!).
-   * It exports all new/untranslated text into **`output/untranslated_chunks/`** (split into manageable ~250-line files).
+### Step 3: Build your local Translation Memory database
+* Double-click **`run_translation_sync.bat`** (or run `python gfl2_translation_sync.py`).
+* Select **Option 1** (*Build / Seed Database from existing translations*).
+* Press **Enter** to accept the default file paths.
 
 > [!TIP]
-> Even if you don't translate the new text yet, your game file is already 96% translated and fully playable!
+> In ~5 seconds, your personal `translation_memory.db` will be created with ~260,000+ learned translation pairs, and all lore rules from `database_source/glossary.json` will be automatically imported!
 
 ---
 
-### Step 4: Translate the New Strings
+## 📖 Detailed User Manual & Guides
 
-You have three ways to translate the remaining chunks in `output/untranslated_chunks/`:
+For detailed step-by-step instructions on updating the game every 20 days, translating new chunks with AI, and managing the Lore Glossary, please consult the complete manual:
 
-#### Option A: Ask Antigravity (Easiest)
-Simply ask in chat:
-> *"Please translate `chunk_001.json` through `chunk_005.json`."*
-Antigravity will translate the files directly in your workspace and update your database automatically.
-
-#### Option B: Use ChatGPT / Claude Web
-1. Open any file in `output/untranslated_chunks/` (e.g. `chunk_001.json`).
-2. Copy the contents (`Ctrl+A`, `Ctrl+C`).
-3. Paste into ChatGPT or Claude. The file already has the system prompt at the top.
-4. Copy the AI's response and save it back into the file.
-5. In `run_translation_sync.bat`, choose **Option 4** (*Import translated file*) and press Enter.
-
-#### Option C: Built-in Auto-Translate
-In `run_translation_sync.bat`, choose **Option 3** (*Auto-Translate new strings*).  
-* It will translate new strings via Google Translate and save them to the database.  
-*(Note: Large batches of 5,000+ lines may be throttled by Google; Options A and B are recommended for large updates).*
+👉 **See [`[GUIDE] README.md`](file:///C:/Users/Paruhas.c/Downloads/langpackage_scripts/%5BGUIDE%5D%20README.md)** for:
+* **Patch Update Workflow**: Detailed 5-step routine for each 20-day game update.
+* **AI Translation Guide**: How to translate new strings using ChatGPT, Claude, or Google Translate.
+* **Lore Glossary & Rulebook**: Complete table of enforced lore terms (`Ateraxis`, `Sangvis Ferri`, `the Elmo`, `Sextans`, `Your Excellency`, etc.) and how to add new terms.
 
 ---
 
-### Step 5: Audit & Auto-Fix Lore Glossary (Recommended)
-Before rebuilding your game file, run the lore auditor to clean up any machine translation quirks (e.g. `Star Abyss` → `Ateraxis`, `Sextant` → `Sextans`, generic `sir` → `Your Excellency`):
-
-* Double-click **`run_glossary.bat`** and select **Option 1** (*Audit & Auto-Fix*).
-* Or run in terminal:
-  ```powershell
-  python apply_glossary.py fix
-  ```
-This instantly verifies both `translation_memory.db` and `output/translations_eng.json` against the database glossary rules.
-
----
-
-### Step 6: Rebuild the Game File
-Once you are ready to build:
-
-```powershell
-python langpackage_import.py LangPackageTableCnData.bytes output/translations_eng.json output/LangPackageTableCnData.bytes
-```
-
-Your finished translated game package will be located at:
-`output\LangPackageTableCnData.bytes`
-
-Copy this file into your game's data folder, and you are ready to play!
-
----
-
-## 🛡️ Lore Glossary & Terminology Protection (Database-Driven)
-
-To prevent generic AI and machine translators from mistranslating official Girls' Frontline lore across 20-day update cycles, all official terms, forbidden translations, and character contexts are stored **directly inside the database** (`translation_memory.db` in table `glossary`).
-
-### Key Lore Rules Enforced
-
-| Chinese Term | Official English | Forbidden / Machine Translations Replaced | Context / Notes |
-| :--- | :--- | :--- | :--- |
-| **星渊** | **Ateraxis** | `Star Abyss`, `Star Abyss-a`, `Astral Abyss` | Avatar of Boojum |
-| **铁血** / **铁血工造** | **Sangvis Ferri** | `Iron Blood`, `Iron-Blood`, `IronBlood` | Faction name |
-| **艾莫号** / **艾莫** | **the Elmo** / **Elmo** | `Emmo`, `Aimo` | Commander's mobile base |
-| **六分仪** | **Sextans** | `Sextant` | Tactical Doll (brass sextant instrument kept intact) |
-| **六分仪小姐** | **Miss Sextans** | `Miss Sextant` | Doll address |
-| **阁下** | **Your Excellency** | `sir`, `Sir`, `Milord` | Formal address used towards the Commander |
-| **伯介姆** | **Boojum** | `Bojem`, `Bergam` | Extraterrestrial entity |
-| **塌陷液** | **Collapse Fluid** | `Collapse Liquid` | Relic energy substance |
-| **心智云图** | **Neural Cloud** | `Mental Cloud` | Doll consciousness storage |
-| **希岸空间** | **Nirvana space** | `Xi'an space`, `Xian space` | Virtual realm |
-| **科德韦尔** | **Caldwell** | `Coldwell` | Key story researcher |
-| **新苏联** | **Neo-Soviet** | `New Soviet` | Faction |
-
-### Managing the Glossary
-
-* **View terms**: Double-click `run_glossary.bat` (Option 2) or run `python apply_glossary.py list`
-* **Auto-Fix**: Double-click `run_glossary.bat` (Option 1) or run `python apply_glossary.py fix`
-* **Export to JSON**: Run `python apply_glossary.py export glossary.json` to share or edit in VS Code
-* **Import from JSON**: Edit `glossary.json` and sync it back into the DB with `python apply_glossary.py import glossary.json`
-* **Add new term via CLI**:
-  ```powershell
-  python apply_glossary.py add "源石" "Originium" --bad "Source Stone" --category "Lore"
-  ```
-
----
-
-## 🛠️ Command-Line Interface (CLI) Reference
-
-For automated scripts or terminal users, all commands can be run directly:
+## 🛠️ CLI Quick Reference Table
 
 | Task | Command |
 | :--- | :--- |
+| **Export .bytes to JSON** | `python langpackage_export.py <input.bytes> <output.json>` |
+| **Build DB from baseline files** | `python gfl2_translation_sync.py build --cn <cn.json> --en <en.json>` |
 | **Sync update & export chunks** | `python gfl2_translation_sync.py sync --input translations.json` |
-| **Sync & auto-translate** | `python gfl2_translation_sync.py sync --input translations.json --auto-translate` |
 | **Import translated chunk(s)** | `python gfl2_translation_sync.py import output/untranslated_chunks` |
-| **Import single JSON file** | `python gfl2_translation_sync.py import output/my_translations.json` |
-| **Export database to JSON** | `python gfl2_translation_sync.py export output/translation_memory_backup.json` |
 | **Audit & Fix Lore Glossary** | `python apply_glossary.py fix` |
 | **List Glossary terms** | `python apply_glossary.py list` |
-| **Export Glossary to JSON** | `python apply_glossary.py export glossary.json` |
-| **Import Glossary from JSON** | `python apply_glossary.py import glossary.json` |
-| **View database statistics** | `python gfl2_translation_sync.py stats` |
+| **Export Glossary to JSON** | `python apply_glossary.py export` |
+| **Import Glossary from JSON** | `python apply_glossary.py import` |
+| **Rebuild final .bytes file** | `python langpackage_import.py <source.bytes> <translated.json> <output.bytes>` |
 
 ---
 
-## 💡 Key Tips & Best Practices
+## 💡 Best Practices
 
-* **Formatting Tags:** In GFL2, strings often contain tags like `<color=#FFA800>text</color>`, `{0}`, and `\n`. The sync tool preserves these automatically during string matching.
-* **Database Safety:** The SQLite database `translation_memory.db` is stored locally. You can back it up anytime using Option 5 or by copying the `.db` file.
-* **Incremental Updates:** You can translate as few or as many chunks as you want. Any imported chunk is permanently stored in the database.
-
+* **Preserve In-Game Markup**: Strings in GFL2 contain formatting tags like `<color=#FFA800>text</color>`, `{0}`, and `\n`. The sync tool preserves these automatically during string matching.
+* **Local Database Safety**: Your `translation_memory.db` stays strictly on your local machine and will never be overwritten or deleted by git pulls.

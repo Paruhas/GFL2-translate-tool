@@ -1,5 +1,5 @@
 {
-  "total_terms": 29,
+  "total_terms": 30,
   "glossary": [
     {
       "source_cn": "乔扎",
@@ -103,6 +103,17 @@
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Tactical Doll (Type 95)"
+    },
+    {
+      "source_cn": "浊刻伤害",
+      "target_en": "Hydro Damage",
+      "bad_translations": [
+        "Corrosive damage"
+      ],
+      "exclusions": [],
+      "category": "Damage",
+      "speaker_context": "Any",
+      "notes": "Hydro damage"
     },
     {
       "source_cn": "新苏联",

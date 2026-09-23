@@ -1,5 +1,12 @@
-/__pycache__
-/output
-/private_source
+/__pycache__/
+/output/
+/private_source/
 
-LangPackageTableCnData.bytes 
+# Ignore game data binary packages
+*.bytes
+
+# Ignore local SQLite translation memory databases
+translation_memory.db*
+
+# Ignore temporary zip archives
+*.zip

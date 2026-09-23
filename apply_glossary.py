@@ -24,13 +24,65 @@ if hasattr(sys.stdout, "reconfigure"):
 DEFAULT_DB = Path(__file__).resolve().parent / "translation_memory.db"
 DEFAULT_CN = Path(__file__).resolve().parent / "output" / "translations.json"
 DEFAULT_EN = Path(__file__).resolve().parent / "output" / "translations_eng.json"
+DEFAULT_GLOSSARY_JSON = Path(__file__).resolve().parent / "database_source" / "glossary.json"
 
 
 def get_connection(db_path: Path) -> sqlite3.Connection:
     conn = sqlite3.connect(db_path)
     conn.execute("PRAGMA journal_mode=WAL;")
     conn.execute("PRAGMA synchronous=NORMAL;")
+    conn.execute("""
+        CREATE TABLE IF NOT EXISTS glossary (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            source_cn TEXT UNIQUE NOT NULL,
+            target_en TEXT NOT NULL,
+            bad_translations TEXT DEFAULT '[]',
+            exclusions TEXT DEFAULT '[]',
+            category TEXT DEFAULT 'General',
+            speaker_context TEXT,
+            notes TEXT,
+            updated_at TEXT
+        );
+    """)
+    conn.execute("CREATE INDEX IF NOT EXISTS idx_glossary_source_cn ON glossary (source_cn);")
+    conn.commit()
+
+    # If glossary table is empty, auto-import from database_source/glossary.json
+    cur = conn.cursor()
+    cur.execute("SELECT COUNT(*) FROM glossary;")
+    if cur.fetchone()[0] == 0:
+        json_file = db_path.parent / "database_source" / "glossary.json"
+        if not json_file.exists():
+            json_file = db_path.parent / "glossary.json"
+        if json_file.exists():
+            try:
+                with json_file.open("r", encoding="utf-8") as f:
+                    data = json.load(f)
+                items = data.get("glossary", data if isinstance(data, list) else [])
+                now_str = datetime.now().isoformat()
+                for item in items:
+                    if "source_cn" in item and "target_en" in item:
+                        b_json = json.dumps(item.get("bad_translations", []), ensure_ascii=False)
+                        e_json = json.dumps(item.get("exclusions", []), ensure_ascii=False)
+                        cur.execute("""
+                            INSERT OR IGNORE INTO glossary (source_cn, target_en, bad_translations, exclusions, category, speaker_context, notes, updated_at)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?);
+                        """, (
+                            item["source_cn"],
+                            item["target_en"],
+                            b_json,
+                            e_json,
+                            item.get("category", "General"),
+                            item.get("speaker_context"),
+                            item.get("notes"),
+                            now_str
+                        ))
+                conn.commit()
+            except Exception:
+                pass
     return conn
+
+
 
 
 def list_terms(db_path: Path, category: str | None = None) -> None:
@@ -304,11 +356,12 @@ def main():
 
     # export
     p_exp = subparsers.add_parser("export", help="Export DB glossary to JSON")
-    p_exp.add_argument("output", type=Path, default=Path("glossary.json"), nargs="?", help="Output file")
+    p_exp.add_argument("output", type=Path, default=DEFAULT_GLOSSARY_JSON, nargs="?", help="Output file (default: database_source/glossary.json)")
 
     # import
     p_imp = subparsers.add_parser("import", help="Import glossary JSON into DB")
-    p_imp.add_argument("input", type=Path, default=Path("glossary.json"), nargs="?", help="Input file")
+    p_imp.add_argument("input", type=Path, default=DEFAULT_GLOSSARY_JSON, nargs="?", help="Input file (default: database_source/glossary.json)")
+
 
     args = parser.parse_args()
 
