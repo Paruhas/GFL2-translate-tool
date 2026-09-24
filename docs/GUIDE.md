@@ -21,6 +21,7 @@ This manual provides complete step-by-step instructions for maintaining **Girls'
    * [Enforced Lore Terms & Substitutions](#enforced-lore-terms--substitutions)
    * [Managing the Glossary via `run_glossary.bat`](#managing-the-glossary-via-run_glossarybat)
    * [Adding Custom Terms & JSON Sync](#adding-custom-terms--json-sync)
+   * [Understanding and Using `exclusions`](#understanding-and-using-exclusions)
 4. [💡 Best Practices & Pro Tips](#4--best-practices--pro-tips)
 
 ---
@@ -196,6 +197,60 @@ python apply_glossary.py add "源石" "Originium" --bad "Source Stone" --categor
    }
    ```
 3. Save the file and run `run_glossary.bat` $\to$ **Option 4** (*Import Glossary*).
+
+---
+
+### Understanding and Using `exclusions`
+
+The `exclusions` field is a safety guard against false positives and unintended replacements during glossary auto-fixing.
+
+#### How It Works
+`exclusions` accepts a list of Chinese keywords/substrings. When `apply_glossary.py` scans a string, **if ANY exclusion keyword is present in the source Chinese line, the replacement rule is automatically skipped** for that line:
+
+```python
+if cn_term not in cn_text or any(exc in cn_text for exc in excs):
+    continue
+```
+
+#### Why It Is Needed (Real Examples)
+
+1. **Physical Objects vs. Character Names (Homonyms)**
+   * **Term**: Chinese `六分仪` $\to$ English `Sextans` (Tactical Doll).
+   * **Problem**: In nautical/navigation contexts, `六分仪` means an actual brass sextant tool (`黄铜六分仪`). We do not want to replace "brass sextant" with "brass Sextans"!
+   * **Exclusion**: `"exclusions": ["黄铜"]`
+   * **Result**: Whenever `黄铜` appears in the Chinese line, the replacement rule is skipped, leaving the physical instrument intact as "brass sextant".
+
+2. **Base Names vs. Compound Names / Formal Titles**
+   * **Term**: Chinese `欧菲露妮` $\to$ English `Ophelune`.
+   * **Problem**: When a line contains the full formal title `欧菲露妮小姐` ("Miss Ophelune"), which has its own designated translation entry, we do not want the base name rule to accidentally corrupt it.
+   * **Exclusion**: `"exclusions": ["欧菲露妮小姐"]`
+   * Similarly: `瓦西尔` ("Vasily") excludes `瓦西尔·普加乔夫` ("Vasily Pugachev"), and `法本集团` ("FABN Group") excludes `赛诺菲与法本集团` ("Sanofi-FABN Group").
+
+3. **Contextual Honorifics**
+   * **Term**: Chinese `阁下` $\to$ English `Your Excellency` (Formal address towards Commander).
+   * **Problem**: `总编阁下` refers to the Editor-in-Chief rather than the Commander.
+   * **Exclusion**: `"exclusions": ["总编"]`
+
+#### How to Configure Exclusions
+
+* **Via JSON (`database_source/glossary.json`)**:
+  ```json
+  {
+    "source_cn": "六分仪",
+    "target_en": "Sextans",
+    "bad_translations": ["Sextant"],
+    "exclusions": ["黄铜"],
+    "category": "Characters",
+    "speaker_context": "Excludes brass instrument (黄铜)",
+    "notes": "Tactical Doll Sextans"
+  }
+  ```
+* **Via Command Line**:
+  ```powershell
+  python apply_glossary.py add "六分仪" "Sextans" --bad "Sextant" --exclude "黄铜" --category "Characters"
+  ```
+* **Via GUI (`run_ui.bat`)**:
+  In the **Lore Glossary** tab, click **Add Term** and specify comma-separated exclusion keywords in the **Exclusions (comma-separated):** input field.
 
 ---
 

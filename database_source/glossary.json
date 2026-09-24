@@ -1,5 +1,5 @@
 {
-  "total_terms": 192,
+  "total_terms": 215,
   "glossary": [
     {
       "source_cn": "乌尔丽德",
@@ -16,10 +16,11 @@
     },
     {
       "source_cn": "乔扎",
-      "target_en": "Jawza",
+      "target_en": "Graurizard",
       "bad_translations": [
         "Josa",
-        "Qiaoza"
+        "Qiaoza",
+        "Joeza"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -821,7 +822,8 @@
       "source_cn": "克莱妲",
       "target_en": "Koleda",
       "bad_translations": [
-        "Cleida"
+        "Cleida",
+        "Klada"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -862,7 +864,10 @@
       "source_cn": "兰汀",
       "target_en": "Lentine",
       "bad_translations": [
-        "Landin"
+        "Landin",
+        "Lantin",
+        "Lantine",
+        "Lanting"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -875,14 +880,29 @@
       "source_cn": "可露凯",
       "target_en": "Klukai",
       "bad_translations": [
-        "Colukai"
+        "Colukai",
+        "Clukay",
+        "416"
       ],
-      "exclusions": [],
+      "exclusions": [
+        "可露凯姐姐"
+      ],
       "category": "Characters",
       "speaker_context": "Any",
       "notes": "Tactical Doll name",
       "created_at": "2026-09-23T18:08:36.082923",
       "updated_at": "2026-09-23T18:08:36.082923"
+    },
+    {
+      "source_cn": "可露凯姐姐",
+      "target_en": "Big Sis",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Honorific",
+      "notes": "Belka Call Klukai-oneechan",
+      "created_at": null,
+      "updated_at": null
     },
     {
       "source_cn": "哈卜茜",
@@ -1033,8 +1053,8 @@
       ],
       "exclusions": [],
       "category": "Characters",
-      "speaker_context": "Any",
-      "notes": "Phaetusa naming another her",
+      "speaker_context": "Phaetusa call Sweeper",
+      "notes": "Nickname give to Sweeper by Phaetusa, marked maybe bad word Darky",
       "created_at": "2026-09-23T18:08:36.145705",
       "updated_at": "2026-09-23T18:08:36.145705"
     },
@@ -1042,7 +1062,11 @@
       "source_cn": "巴希达",
       "target_en": "Balthilde",
       "bad_translations": [
-        "Bashida"
+        "Bashida",
+        "Baheda",
+        "Bakhida",
+        "Bahida",
+        "Bathild"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -1050,6 +1074,19 @@
       "notes": "Tactical Doll name",
       "created_at": "2026-09-23T18:08:36.150212",
       "updated_at": "2026-09-23T18:08:36.150212"
+    },
+    {
+      "source_cn": "希娅",
+      "target_en": "Theia",
+      "bad_translations": [
+        "Shia"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Story character",
+      "created_at": null,
+      "updated_at": null
     },
     {
       "source_cn": "幼熙",
@@ -1131,7 +1168,8 @@
       "source_cn": "比悠卡",
       "target_en": "Belka",
       "bad_translations": [
-        "Biyouka"
+        "Biyouka",
+        "Byuka"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -1157,7 +1195,8 @@
       "source_cn": "洛塔",
       "target_en": "Lotta",
       "bad_translations": [
-        "Luota"
+        "Luota",
+        "Lotte"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -1212,7 +1251,7 @@
       "exclusions": [],
       "category": "Characters",
       "speaker_context": "Any",
-      "notes": "Nyxie's Sangvis Ferri Doll name",
+      "notes": "Sangvis Ferri Doll name that share frame with Phaetusa",
       "created_at": "2026-09-23T18:08:36.216739",
       "updated_at": "2026-09-23T18:08:36.216739"
     },
@@ -1220,7 +1259,8 @@
       "source_cn": "玛绮朵",
       "target_en": "Makkiato",
       "bad_translations": [
-        "Machido"
+        "Machido",
+        "Macchiato"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -1252,6 +1292,17 @@
       "notes": "Tactical Doll name",
       "created_at": "2026-09-23T18:08:36.232750",
       "updated_at": "2026-09-23T18:08:36.232750"
+    },
+    {
+      "source_cn": "盖娅",
+      "target_en": "Gaia",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Story character",
+      "created_at": null,
+      "updated_at": null
     },
     {
       "source_cn": "秋桦",
@@ -1289,6 +1340,19 @@
       "updated_at": "2026-09-23T18:08:36.248253"
     },
     {
+      "source_cn": "米什提",
+      "target_en": "Mechty",
+      "bad_translations": [
+        "Mishti"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
       "source_cn": "米什缇",
       "target_en": "Mechty",
       "bad_translations": [
@@ -1300,6 +1364,34 @@
       "notes": "Tactical Doll name",
       "created_at": "2026-09-23T18:08:36.256778",
       "updated_at": "2026-09-23T18:08:36.256778"
+    },
+    {
+      "source_cn": "米蒂尔",
+      "target_en": "Mityl",
+      "bad_translations": [
+        "Mithil",
+        "Midir",
+        "Mythir",
+        "Mitiel",
+        "Mittier"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "NPC - Tactical Doll name",
+      "created_at": "2026-09-24T01:40:00.000000",
+      "updated_at": "2026-09-24T01:40:00.000000"
+    },
+    {
+      "source_cn": "索普",
+      "target_en": "Soppo",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Tactical Doll name",
+      "created_at": null,
+      "updated_at": null
     },
     {
       "source_cn": "索米",
@@ -1477,7 +1569,8 @@
       "source_cn": "莱娜",
       "target_en": "Lenna",
       "bad_translations": [
-        "Laina"
+        "Laina",
+        "Lena"
       ],
       "exclusions": [],
       "category": "Characters",
@@ -1485,6 +1578,19 @@
       "notes": "Tactical Doll name",
       "created_at": "2026-09-23T18:08:36.350107",
       "updated_at": "2026-09-23T18:08:36.350107"
+    },
+    {
+      "source_cn": "蓝雪球",
+      "target_en": "Blusphere",
+      "bad_translations": [
+        "Snowball"
+      ],
+      "exclusions": [],
+      "category": "Characters",
+      "speaker_context": "Any",
+      "notes": "Story character",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
     },
     {
       "source_cn": "闪电",
@@ -1561,7 +1667,7 @@
       "source_cn": "浊刻伤害",
       "target_en": "Hydro Damage",
       "bad_translations": [
-        "Corrosive damage"
+        "Corrosive Damage"
       ],
       "exclusions": [],
       "category": "Damage",
@@ -1646,6 +1752,32 @@
       "updated_at": "2026-09-23T18:08:36.405631"
     },
     {
+      "source_cn": "国安局",
+      "target_en": "StateSec",
+      "bad_translations": [
+        "The State Security Bureau"
+      ],
+      "exclusions": [
+        "国家安全局"
+      ],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Bureau of State Security",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
+    },
+    {
+      "source_cn": "国家安全局",
+      "target_en": "Bureau of State Security",
+      "bad_translations": [],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Bureau of State Security",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
+    },
+    {
       "source_cn": "奥尔劳格财团",
       "target_en": "Orlog Conglomerate",
       "bad_translations": [
@@ -1659,6 +1791,19 @@
       "updated_at": "2026-09-23T18:08:36.405631"
     },
     {
+      "source_cn": "帕拉蒂斯",
+      "target_en": "Paradeus",
+      "bad_translations": [
+        "Paradis"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Paradeus faction",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
       "source_cn": "新苏联",
       "target_en": "Neo-Soviet",
       "bad_translations": [
@@ -1670,6 +1815,19 @@
       "notes": "Neo-Soviet Union",
       "created_at": "2026-09-23T18:08:36.411959",
       "updated_at": "2026-09-23T18:08:36.411959"
+    },
+    {
+      "source_cn": "方糖",
+      "target_en": "Zucchero",
+      "bad_translations": [
+        "Sugar Cube"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Zucchero Squad",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
     },
     {
       "source_cn": "曼尼安保",
@@ -1704,6 +1862,19 @@
       "updated_at": "2026-09-23T19:14:19.750929"
     },
     {
+      "source_cn": "瓦良格帮",
+      "target_en": "Varjager",
+      "bad_translations": [
+        "Varyag Gang"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Varjagers",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
+    },
+    {
       "source_cn": "罗克萨特主义合众国联盟",
       "target_en": "URNC",
       "bad_translations": [
@@ -1715,6 +1886,22 @@
       "notes": "Union of Rossartrist Nations Coalition",
       "created_at": "2026-09-23T18:08:36.417757",
       "updated_at": "2026-09-23T18:08:36.417757"
+    },
+    {
+      "source_cn": "罗联",
+      "target_en": "URNC",
+      "bad_translations": [
+        "the Union",
+        "the Union of Rossartrist Nations Coalition"
+      ],
+      "exclusions": [
+        "罗克萨特主义合众国联盟"
+      ],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "Union of Rossartrist Nations Coalition",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
     },
     {
       "source_cn": "赛诺菲与法本集团",
@@ -1764,6 +1951,19 @@
       "updated_at": "2026-09-23T18:08:36.431069"
     },
     {
+      "source_cn": "霜降",
+      "target_en": "Frostfall",
+      "bad_translations": [
+        "Frost"
+      ],
+      "exclusions": [],
+      "category": "Factions",
+      "speaker_context": "Any",
+      "notes": "G&K Forstfall Squad",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
+    },
+    {
       "source_cn": "主人",
       "target_en": "Master",
       "bad_translations": [
@@ -1776,6 +1976,21 @@
       "notes": "Maid doll address towards the Commander",
       "created_at": "2026-09-23T18:08:36.437060",
       "updated_at": "2026-09-23T18:08:36.437060"
+    },
+    {
+      "source_cn": "副官",
+      "target_en": "Adjutant",
+      "bad_translations": [
+        "Lieutenant"
+      ],
+      "exclusions": [
+        "设为副官"
+      ],
+      "category": "Honorific",
+      "speaker_context": "Any",
+      "notes": "Military title and home screen assistant Doll role",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
     },
     {
       "source_cn": "指挥官",
@@ -1806,6 +2021,33 @@
       "updated_at": "2026-09-23T18:08:36.449351"
     },
     {
+      "source_cn": "帕拉达嘉",
+      "target_en": "Paradajz",
+      "bad_translations": [
+        "Paradaga",
+        "Pradaja"
+      ],
+      "exclusions": [],
+      "category": "Location",
+      "speaker_context": "Any",
+      "notes": "mean Tomato Town",
+      "created_at": null,
+      "updated_at": null
+    },
+    {
+      "source_cn": "硅砂港",
+      "target_en": "Port Mica",
+      "bad_translations": [
+        "Silica Sand Port"
+      ],
+      "exclusions": [],
+      "category": "Location",
+      "speaker_context": "Any",
+      "notes": "Port Mica",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
+    },
+    {
       "source_cn": "净化区",
       "target_en": "Purified Zone",
       "bad_translations": [
@@ -1819,19 +2061,40 @@
       "updated_at": "2026-09-23T18:08:36.454918"
     },
     {
+      "source_cn": "希岸",
+      "target_en": "Nirvana ",
+      "bad_translations": [
+        "Xi'an",
+        "Xian",
+        "Xian",
+        "Cis-Shore",
+        "the Shore",
+        "Cican"
+      ],
+      "exclusions": [
+        "希岸空间"
+      ],
+      "category": "Locations",
+      "speaker_context": "Any",
+      "notes": "Virtual realm created by Relic tech",
+      "created_at": "2026-09-23T18:08:36.460800",
+      "updated_at": "2026-09-24T11:10:00.000000"
+    },
+    {
       "source_cn": "希岸空间",
       "target_en": "Nirvana space",
       "bad_translations": [
         "Xi'an space",
         "Xian space",
-        "Xian Space"
+        "Xian Space",
+        "Cis-Shore Space"
       ],
       "exclusions": [],
       "category": "Locations",
       "speaker_context": "Any",
       "notes": "Virtual realm created by Relic tech",
       "created_at": "2026-09-23T18:08:36.460800",
-      "updated_at": "2026-09-23T18:08:36.460800"
+      "updated_at": "2026-09-24T11:10:00.000000"
     },
     {
       "source_cn": "红区",
@@ -1894,6 +2157,19 @@
       "notes": "Avatar of Boojum (Ateraxis)",
       "created_at": "2026-09-23T18:08:36.485602",
       "updated_at": "2026-09-23T18:08:36.485602"
+    },
+    {
+      "source_cn": "涅托",
+      "target_en": "Nyto",
+      "bad_translations": [
+        "Nito"
+      ],
+      "exclusions": [],
+      "category": "Lore / Entity",
+      "speaker_context": "Any",
+      "notes": "Paradeus's enhanced doll",
+      "created_at": "2026-09-24T11:10:00.000000",
+      "updated_at": "2026-09-24T11:10:00.000000"
     },
     {
       "source_cn": "塌陷液",
@@ -1974,6 +2250,20 @@
       "updated_at": "2026-09-23T18:08:36.513824"
     },
     {
+      "source_cn": "卡萝",
+      "target_en": "Kuro",
+      "bad_translations": [
+        "Caro",
+        "Carol"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Tactical Doll name",
+      "created_at": "2026-09-24T01:40:00.000000",
+      "updated_at": "2026-09-24T01:40:00.000000"
+    },
+    {
       "source_cn": "奇洛薇格",
       "target_en": "Chiloveig",
       "bad_translations": [
@@ -1999,6 +2289,19 @@
       "notes": "NPC",
       "created_at": "2026-09-23T18:08:36.523642",
       "updated_at": "2026-09-23T18:08:36.523642"
+    },
+    {
+      "source_cn": "帕那刻亚",
+      "target_en": "Panakeia",
+      "bad_translations": [
+        "Panacea"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Tactical Doll name",
+      "created_at": "2026-09-24T01:40:00.000000",
+      "updated_at": "2026-09-24T01:40:00.000000"
     },
     {
       "source_cn": "德尔",
@@ -2085,6 +2388,20 @@
       "updated_at": "2026-09-23T18:08:36.550888"
     },
     {
+      "source_cn": "洛可西斯",
+      "target_en": "Lachesis",
+      "bad_translations": [
+        "Rhoxis",
+        "Rhocosis"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Tactical Doll name",
+      "created_at": "2026-09-24T01:40:00.000000",
+      "updated_at": "2026-09-24T01:40:00.000000"
+    },
+    {
       "source_cn": "瓦西尔",
       "target_en": "Vasily",
       "bad_translations": [
@@ -2136,6 +2453,19 @@
       "notes": "NPC",
       "created_at": "2026-09-23T19:02:00.000000",
       "updated_at": "2026-09-23T19:02:00.000000"
+    },
+    {
+      "source_cn": "黛拉",
+      "target_en": "Della",
+      "bad_translations": [
+        "Dyla"
+      ],
+      "exclusions": [],
+      "category": "NPC",
+      "speaker_context": "Any",
+      "notes": "NPC - Underground Broker who help Basti and Faelynn, Mother of Zoe",
+      "created_at": null,
+      "updated_at": null
     },
     {
       "source_cn": "夏日投手",
