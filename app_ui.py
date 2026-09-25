@@ -418,9 +418,18 @@ class GFL2TranslatorApp(tk.Tk):
                 out_file.parent.mkdir(parents=True, exist_ok=True)
                 if out_file.exists():
                     out_file.unlink()
-                tot, sup, chg = langpackage_import.import_table(in_file, target_en, out_file, refresh_output=True)
+                res = langpackage_import.import_table(in_file, target_en, out_file, refresh_output=True)
+                if len(res) == 5:
+                    tot, sup, chg, missing, unused = res
+                else:
+                    tot, sup, chg = res[:3]
+                    missing, unused = 0, 0
                 self.log(f"✓ Successfully wrote: {out_file}")
-                self.log(f"✓ {chg:,} of {tot:,} entries updated in binary table!")
+                self.log(f"✓ {chg:,} of {tot:,} game rows updated with English text.")
+                if missing:
+                    self.log(f"ℹ {missing:,} game rows have no translation yet and remain in Chinese.")
+                if unused:
+                    self.log(f"ℹ {unused:,} translation entries in your file are from older/removed game content.")
                 self.log(f"\n🎉 SUCCESS! Your playable English game file is ready:\n{out_file}")
 
                 self.after(0, lambda: messagebox.showinfo("Update Complete", f"Successfully built translated game file:\n\n{out_file}\n\nCopy this file to your game directory!"))
@@ -551,16 +560,20 @@ class GFL2TranslatorApp(tk.Tk):
                 cn_json = temp_dir / "temp_cn.json"
                 en_json = temp_dir / "temp_en.json"
 
-                self._setup_log(f"Extracting Chinese strings from {cn_file.name}...")
-                if cn_json.exists(): cn_json.unlink()
-                langpackage_export.export_table(cn_file, cn_json)
+                if cn_file.suffix.lower() == ".bytes" and en_file.suffix.lower() == ".bytes":
+                    self._setup_log(f"Extracting and pairing strings directly from {cn_file.name} and {en_file.name}...")
+                    count = gfl2_translation_sync.build_database_from_tables(cn_file, en_file, DEFAULT_DB)
+                else:
+                    self._setup_log(f"Extracting Chinese strings from {cn_file.name}...")
+                    if cn_json.exists(): cn_json.unlink()
+                    langpackage_export.export_table(cn_file, cn_json)
 
-                self._setup_log(f"Extracting English strings from {en_file.name}...")
-                if en_json.exists(): en_json.unlink()
-                langpackage_export.export_table(en_file, en_json)
+                    self._setup_log(f"Extracting English strings from {en_file.name}...")
+                    if en_json.exists(): en_json.unlink()
+                    langpackage_export.export_table(en_file, en_json)
 
-                self._setup_log(f"Building Translation Memory database: {DEFAULT_DB.name}...")
-                count = gfl2_translation_sync.build_database_from_files(cn_json, en_json, DEFAULT_DB)
+                    self._setup_log(f"Building Translation Memory database: {DEFAULT_DB.name}...")
+                    count = gfl2_translation_sync.build_database_from_files(cn_json, en_json, DEFAULT_DB)
 
                 self._setup_log(f"Importing lore rules from database_source/glossary.json...")
                 apply_glossary.get_connection(DEFAULT_DB)

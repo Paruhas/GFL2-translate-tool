@@ -103,20 +103,29 @@ Protects against recurring AI/machine translation mistranslations:
 
 ---
 
-## 🧩 6. Untranslated Chunks & Importer Format
+## 🧩 6. Untranslated Chunks & Community Format (`gfl2-langpackage-by-text-1`)
+### SHA-256 Text Fingerprint Deduplication:
+* **Format**: `"format": "gfl2-langpackage-by-text-1"`
+* **Key Mechanism**: Keyed by the first 16 hexadecimal characters (64 bits) of the UTF-8 SHA-256 hash of the Chinese source text (`hashlib.sha256(cn.encode('utf-8')).hexdigest()[:16]`).
+* **Deduplication Impact**:
+  * Collapses ~500,000 game rows down to **~145,000 unique texts** (~70% reduction in file size and translation volume).
+  * During `.bytes` compilation (`langpackage_import.py`), a single translation is automatically applied to all matching game rows that share that Chinese text.
+* **Return Signature**:
+  * `import_table()` returns 5 diagnostics: `(total, supplied, changed, missing, unused)`
+    * `total`: Total game table rows (~497k).
+    * `supplied`: Rows matching a translation entry.
+    * `changed`: Rows actually modified with different English text.
+    * `missing`: Brand new lines lacking any translation (kept as original Chinese).
+    * `unused`: Translation entries from removed/obsolete game content.
+
+### Ingestion & Chunks:
 When importing chunks via Tab 4 (`Import Selected Chunk`):
 * **Automatic Glossary Clean-up**: Applied automatically at import time; logs all terms corrected.
 * **Sets `is_verified = 1`**: Newly imported strings are saved directly into `translation_memory.db` as verified.
-* **Core Rule**: The JSON **Key** must be the original Chinese text, and the **Value** must be the English translation.
-* **Standard Format**:
-  ```json
-  {
-    "translations": {
-      "原版中文文本": "English translated text"
-    }
-  }
-  ```
-* Importer also accepts flat `{ "中文": "English" }` or `{ "texts": { ... } }`.
+* **Format Agnostic**: Accepts:
+  1. Community text-hash format: `{"format": "gfl2-langpackage-by-text-1", "texts": {"<16-hex-hash>": "English"}}` (automatically resolves hashes to Chinese via DB `fingerprint` index).
+  2. Standard Chinese-keyed JSON: `{"translations": {"中文": "English"}}`.
+  3. Raw flat JSON: `{"中文": "English"}` or `{"texts": { ... }}`.
 * Automatically strips markdown fences (```` ```json ````) if copied directly from ChatGPT.
 * Skips any values that are empty `""` or identical to Chinese.
 
@@ -125,13 +134,15 @@ When importing chunks via Tab 4 (`Import Selected Chunk`):
 ## 🔍 7. Database Status & Verification Architecture
 * **Total Translations**: 269,314 lines (100% verified with `is_verified = 1`).
 * **Untranslated in Chinese**: 0 lines (100% translated).
+* **Fingerprint Indexed**: Column `fingerprint TEXT` with `CREATE INDEX idx_translations_fingerprint ON translations (fingerprint)` populated for all rows for instant Discord community hash lookups.
 * **Timestamps & Audit Tracking**:
-  - `translations`: `source_cn`, `target_en`, `category`, `context`, `created_at`, `updated_at`, `is_verified`.
+  - `translations`: `source_cn`, `target_en`, `frequency`, `source_type`, `updated_at`, `is_verified`, `created_at`, `fingerprint`.
   - `glossary`: `source_cn`, `target_en`, `bad_translations`, `exclusions`, `category`, `speaker_context`, `notes`, `created_at`, `updated_at`.
 * **Database Immutability & Workflow**:
   - The SQLite database is treated as the source of truth and is strictly read-only during routine 20-day patch updates (`audit_db=False`).
   - Automated lore glossary regex rules run strictly as an ingestion gate when importing newly translated chunks (Tab 4).
   - Fine-grained corrections and quality fixes are performed directly row-by-row in DBeaver by the user.
+* **Direct Table Extraction**: Function `build_database_from_tables(cn_bytes, en_bytes, db)` can parse matching `.bytes` files directly by row ID in memory without generating intermediate temporary JSON files.
 * **The Cecilia Story Quirk**: In a past patch, Mica Team added single characters (e.g. `落入` $\to$ `落入了`, and `劝阻` $\to$ `鼓动`). These have been fully matched and updated with their official English text in `translation_memory.db`.
 
 ---

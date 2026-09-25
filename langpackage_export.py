@@ -1,28 +1,45 @@
 #!/usr/bin/env python3
-"""Export a GFL2 LangPackage table to one UTF-8 JSON file for translation.
+"""Export the text of a GFL2 LangPackage table to UTF-8 JSON for translation.
 
-Python 3.10+; standard library only. Translate the text values, preserving IDs.
-Keep the original .bytes file for
-langpackage_import.py. Neither script needs to be installed.
+Python 3.10+; standard library only. Neither script needs to be installed.
 
-Double-click this script with LangPackageTableCnData.bytes beside it to create
-translations.json. Double-click langpackage_import.py after translating it.
-Command-line arguments remain optional for choosing other paths.
+Each different text appears once, under a key made from the text itself, so
+translations stay matched to their lines when a game update renumbers them.
+
+Double-click this script with LangPackageTableCnData.bytes beside it. The first
+run writes translations/base.json. After a game update, put the game's new
+LangPackageTableCnData.bytes beside the scripts and run it again: it writes a
+file in translations holding only the text that has no translation yet.
+Translate the files in translations, then double-click langpackage_import.py.
+
+A translations.json from the earlier version of these scripts, keyed by text
+ID, is converted on the first run. That needs the LangPackageTableCnData.bytes
+it was exported from.
 """
 
 from __future__ import annotations
 
 import argparse
+from collections import Counter
 from dataclasses import dataclass
+import hashlib
 import json
+import os
 from pathlib import Path
+import re
 import struct
 import sys
+import tempfile
 from typing import Iterator
 
 
 ORIGINAL_NAME = "LangPackageTableCnData.bytes"
-TRANSLATIONS_FILE = "output/translations.json"
+TRANSLATIONS_DIR = "translations"
+LEGACY_FILE = "translations.json"
+LEGACY_KEPT_NAME = "translations-old-format.json"
+FORMAT = "gfl2-langpackage-by-text-1"
+# Files from the ID-keyed scripts: no format field, or the pre-release field value.
+LEGACY_FORMATS = (None, "gfl2-langpackage-text-v1")
 
 
 class TableError(ValueError):
@@ -181,37 +198,183 @@ def load_table(path: Path) -> Table:
     return Table(data, body_start, metadata, indexes, rows)
 
 
-def export_table(source: Path, destination: Path, chunk_size: int | None = None) -> tuple[int, int]:
+def fingerprint(text: str) -> str:
+    """Translation key for a text: the first 64 bits of its UTF-8 SHA-256, in hex."""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
+
+
+KEY = re.compile(r"[0-9a-f]{16}")
+
+
+def source_texts(table: Table) -> dict[str, str]:
+    """Key -> text for every non-empty text in the table, ordered by its lowest ID."""
+    texts: dict[str, str] = {}
+    for row in sorted(table.rows, key=lambda item: item.id):
+        if not row.text:
+            continue  # Empty lines have nothing to translate.
+        key = fingerprint(row.text)
+        if texts.setdefault(key, row.text) != row.text:
+            raise TableError(f"Two different texts share the translation key {key}; these scripts cannot tell them apart.")
+    return texts
+
+
+def unique_object(pairs: list[tuple[str, object]]) -> dict:
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise TableError(f"Duplicate JSON key {key!r}.")
+        result[key] = value
+    return result
+
+
+def json_files(path: Path) -> list[Path]:
+    files = sorted(path.glob("*.json")) if path.is_dir() else [path]
+    if not files:
+        raise TableError(f"{path.name} contains no .json files.")
+    return files
+
+
+def read_documents(path: Path) -> Iterator[tuple[Path, object, dict]]:
+    """(file, format, texts) for each JSON file, with every text checked to be a string."""
+    for file in json_files(path):
+        try:
+            document = json.loads(file.read_text(encoding="utf-8-sig"), object_pairs_hook=unique_object)
+            if not isinstance(document, dict):
+                raise TableError("Expected a JSON object containing texts.")
+            texts = document.get("texts")
+            if not isinstance(texts, dict):
+                raise TableError("The texts property must be an object mapping keys to strings.")
+            for key, text in texts.items():
+                if not isinstance(text, str):
+                    raise TableError(f"Key {key} must contain a string (empty strings are allowed).")
+                try:
+                    text.encode("utf-8")
+                except UnicodeEncodeError as exc:
+                    raise TableError(f"Key {key} contains an invalid Unicode surrogate.") from exc
+        except (ValueError, UnicodeError) as exc:
+            raise TableError(f"{file.name}: {exc}") from exc
+        yield file, document.get("format"), texts
+
+
+def read_translations(path: Path) -> dict[str, str]:
+    """Translation key -> translated text, from one file or every .json file in a folder."""
+    translations: dict[str, str] = {}
+    origin: dict[str, str] = {}
+    for file, format_name, texts in read_documents(path):
+        if format_name in LEGACY_FORMATS:
+            if texts and all(KEY.fullmatch(k) for k in texts.keys()):
+                pass  # Keys are valid SHA-256 fingerprints, allow it
+            else:
+                raise TableError(
+                    f"{file.name} is keyed by text ID, from the earlier version of these scripts. "
+                    "Convert it with langpackage_export.py first."
+                )
+        elif format_name != FORMAT:
+            raise TableError(f"{file.name} is not a translation file these scripts recognise.")
+        for key, text in texts.items():
+            if not KEY.fullmatch(key):
+                raise TableError(f"{file.name}: malformed translation key {key!r}.")
+            if key in translations:
+                raise TableError(f"Translation key {key} is in both {origin[key]} and {file.name}.")
+            translations[key] = text
+            origin[key] = file.name
+    return translations
+
+
+def read_legacy(path: Path) -> dict[int, str]:
+    """Line ID -> translated text, from a file written by the ID-keyed scripts."""
+    translations: dict[int, str] = {}
+    for file, format_name, texts in read_documents(path):
+        if format_name not in LEGACY_FORMATS:
+            raise TableError(f"{file.name} is not a translation file from the earlier version of these scripts.")
+        for key, text in texts.items():
+            if not re.fullmatch(r"0|[1-9][0-9]{0,19}", key):
+                raise TableError(f"{file.name}: malformed text ID {key!r}.")
+            if int(key) in translations:
+                raise TableError(f"Text ID {key} occurs in more than one file.")
+            translations[int(key)] = text
+    return translations
+
+
+@dataclass(slots=True)
+class Conversion:
+    texts: dict[str, str]
+    lines: int
+    conflicts: int
+
+
+def convert_legacy(table: Table, legacy: dict[int, str]) -> Conversion:
+    """Re-key ID-keyed translations by text, using the table they were exported from."""
+    sources = {row.id: row.text for row in table.rows}
+    if legacy.keys() != sources.keys():
+        raise TableError("The text IDs in the translation do not match this game file, so it was not exported from this file.")
+    choices: dict[str, Counter[str]] = {}
+    for identity in sorted(legacy):
+        source = sources[identity]
+        if source:
+            choices.setdefault(fingerprint(source), Counter())[legacy[identity]] += 1
+    texts, conflicts = {}, 0
+    for key, source in source_texts(table).items():
+        counts = choices[key]
+        translated = [text for text in counts if text != source]
+        conflicts += len(translated) > 1
+        # A translated line beats an untranslated copy; then the most common wins; ties go to the lowest ID.
+        texts[key] = max(translated or counts, key=lambda text: counts[text])
+    return Conversion(texts, len(legacy), conflicts)
+
+
+def write_document(path: Path, texts: dict[str, str]) -> None:
+    """Write a translation file that must not exist yet; a failed write leaves no file behind."""
+    if path.exists():
+        raise FileExistsError(f"Refusing to overwrite {path}")
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            "w", encoding="utf-8", newline="\n", dir=path.parent, prefix=".langpackage-", suffix=".tmp", delete=False,
+        ) as stream:
+            temporary = Path(stream.name)
+            json.dump({"format": FORMAT, "texts": texts}, stream, ensure_ascii=False, indent=2)
+            stream.write("\n")
+        os.replace(temporary, path)
+        temporary = None
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
+
+
+def export_table(
+    source: Path, destination: Path, chunk_size: int | None = None, translated: Path | None = None,
+) -> tuple[int, int]:
+    """Write the table's texts, skipping keys already in `translated`. Returns (texts, files)."""
     if chunk_size is not None and chunk_size < 1:
         raise TableError("Chunk size must be at least 1.")
     if destination.exists():
         raise FileExistsError(f"The export destination already exists: {destination}")
-    table = load_table(source)
-    rows = sorted(table.rows, key=lambda row: row.id)
-    size = chunk_size if chunk_size is not None else max(1, len(rows))
-    count = max(1, (len(rows) + size - 1) // size)
+    known = read_translations(translated) if translated is not None else {}
+    texts = [(key, text) for key, text in source_texts(load_table(source)).items() if key not in known]
+    size = chunk_size if chunk_size is not None else max(1, len(texts))
+    count = max(1, (len(texts) + size - 1) // size)
     destination.parent.mkdir(parents=True, exist_ok=True)
     if chunk_size is not None:
         destination.mkdir()
     for part in range(count):
-        batch = rows[part * size:(part + 1) * size]
-        texts = {str(row.id): row.text for row in batch}
-        document = {"texts": texts}
         path = destination if chunk_size is None else destination / f"{part + 1:04d}.json"
-        with path.open("x", encoding="utf-8", newline="\n") as stream:
-            json.dump(document, stream, ensure_ascii=False, indent=2)
-            stream.write("\n")
-    return len(rows), count
+        write_document(path, dict(texts[part * size:(part + 1) * size]))
+    return len(texts), count
 
 
 def nearby_original(directory: Path) -> Path:
     source = directory / ORIGINAL_NAME
     if not source.is_file():
         raise TableError(
-            f"Place the untouched {ORIGINAL_NAME} file beside both scripts, then run this script again.\n"
+            f"Place the game's {ORIGINAL_NAME} file beside both scripts, then run this script again.\n"
             f"Folder: {directory}"
         )
     return source
+
+
+def has_translations(folder: Path) -> bool:
+    return folder.is_dir() and any(folder.glob("*.json"))
 
 
 def wait_to_close() -> None:
@@ -222,26 +385,60 @@ def wait_to_close() -> None:
         pass
 
 
+def convert_nearby(directory: Path, table: Table, folder: Path) -> None:
+    legacy_path = directory / LEGACY_FILE
+    kept = directory / LEGACY_KEPT_NAME
+    if kept.exists():
+        raise TableError(f"Move or rename {LEGACY_KEPT_NAME} first; converting keeps translations.json under that name.")
+    print("Converting translations.json to translations that follow their text...", flush=True)
+    try:
+        conversion = convert_legacy(table, read_legacy(legacy_path))
+    except TableError as exc:
+        raise TableError(
+            f"{exc}\nPut the {ORIGINAL_NAME} that translations.json was exported from beside the scripts, "
+            "run this again, and only then replace it with the game's new file."
+        ) from exc
+    folder.mkdir(exist_ok=True)
+    write_document(folder / "base.json", conversion.texts)
+    legacy_path.rename(kept)
+    print(f"Converted {conversion.lines:,} lines into {len(conversion.texts):,} texts in {TRANSLATIONS_DIR}\\base.json.")
+    if conversion.conflicts:
+        print(f"{conversion.conflicts:,} texts were translated differently on different lines; each keeps its most common translation.")
+    print(f"The old file is kept as {LEGACY_KEPT_NAME}; nothing reads it any more.\n")
+
+
+def next_update_name(folder: Path) -> str:
+    number = 1
+    while (folder / f"update-{number:03d}.json").exists():
+        number += 1
+    return f"update-{number:03d}.json"
+
+
 def double_click_setup() -> int:
     directory = Path(__file__).resolve().parent
+    folder = directory / TRANSLATIONS_DIR
     print("Set up text for translation\n", flush=True)
     try:
         source = nearby_original(directory)
-        destination = directory / TRANSLATIONS_FILE
-        if destination.exists():
-            print("translations.json already exists. Your existing work has been kept.")
-            print(f"File: {destination}")
-            print("Continue translating that file, then double-click langpackage_import.py.")
-            print("For a fresh export, move or rename translations.json and run this script again.")
+        print(f"Reading {source.name}...", flush=True)
+        table = load_table(source)
+        if not has_translations(folder) and (directory / LEGACY_FILE).is_file():
+            convert_nearby(directory, table, folder)
+        elif (directory / LEGACY_FILE).is_file():
+            print(f"translations.json is in the earlier format and is not used; your translations are in {TRANSLATIONS_DIR}.\n")
+        known = read_translations(folder) if has_translations(folder) else {}
+        new = {key: text for key, text in source_texts(table).items() if key not in known}
+        if not new:
+            print("Every text in this game file already has an entry in translations.")
+            print("Double-click langpackage_import.py to create the translated file.")
             return 0
-        print(f"Reading {source.name} and exporting the text...", flush=True)
-        entries, _ = export_table(source, destination)
-        print(f"\nReady: all {entries:,} entries in one JSON file.")
-        print(f"Translate this file: {destination}")
-        print("Translate only the string values under texts. Preserve the IDs.")
-        print("Save the translated file as translations.json beside the scripts.")
-        print("When ready, double-click langpackage_import.py to create the output file.")
-        print(f"Keep {ORIGINAL_NAME} beside the scripts, untouched.")
+        folder.mkdir(exist_ok=True)
+        name = next_update_name(folder) if known else "base.json"
+        write_document(folder / name, new)
+        print(f"Ready: {len(new):,} texts to translate in {TRANSLATIONS_DIR}\\{name}")
+        print("Translate only the text values. Leave the keys and the format line as they are.")
+        print("When ready, double-click langpackage_import.py to create the translated file.")
+        print(f"After a game update, put the game's new {ORIGINAL_NAME} here and run this script again.")
         return 0
     except (OSError, ValueError) as exc:
         print(f"\nSetup could not finish: {exc}")
@@ -254,18 +451,28 @@ def main() -> int:
     if len(sys.argv) == 1:
         return double_click_setup()
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("source", type=Path, help="Original LangPackageTableCnData.bytes (or another locale).")
+    parser.add_argument("source", type=Path, help="The game's LangPackageTableCnData.bytes (or another locale).")
     parser.add_argument("output", type=Path, help="New JSON output file; must not exist.")
-    parser.add_argument("--chunk-size", type=int, help="Optional split export; output is then a new directory. Default: one JSON file.")
+    parser.add_argument("--chunk-size", type=int, help="Split the export; output is then a new folder of numbered files.")
+    parser.add_argument("--skip-translated", type=Path, metavar="TRANSLATIONS", help="Leave out texts already in this translation file or folder.")
+    parser.add_argument("--convert", type=Path, metavar="OLD_JSON", help="Convert an ID-keyed translation exported from SOURCE instead of exporting.")
     args = parser.parse_args()
     try:
-        entries, batches = export_table(args.source, args.output, args.chunk_size)
+        if args.convert is not None:
+            if args.output.exists():
+                raise FileExistsError(f"The output already exists: {args.output}")
+            conversion = convert_legacy(load_table(args.source), read_legacy(args.convert))
+            args.output.parent.mkdir(parents=True, exist_ok=True)
+            write_document(args.output, conversion.texts)
+            print(f"Converted {conversion.lines:,} lines into {len(conversion.texts):,} texts: {args.output.resolve()}")
+            print(f"{conversion.conflicts:,} texts had differing translations; each keeps its most common one.")
+            return 0
+        entries, batches = export_table(args.source, args.output, args.chunk_size, args.skip_translated)
     except (OSError, ValueError) as exc:
         print(f"Error: {exc}", file=sys.stderr)
         return 1
-    print(f"Exported {entries:,} entries to {batches:,} UTF-8 JSON file(s): {args.output.resolve()}")
-    print("Translate only the string values under texts. Preserve the IDs.")
-    print("Keep the original .bytes file; the importer requires it.")
+    print(f"Exported {entries:,} texts to {batches:,} UTF-8 JSON file(s): {args.output.resolve()}")
+    print("Translate only the text values. Leave the keys and the format line as they are.")
     return 0
 
 

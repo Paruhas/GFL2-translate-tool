@@ -19,6 +19,7 @@ import argparse
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -37,6 +38,12 @@ DEFAULT_DB_NAME = "translation_memory.db"
 DEFAULT_CN_FILE = "translations.json"
 DEFAULT_EN_FILE = "translations_eng.json"
 DEFAULT_UNTRANSLATED_FILE = "untranslated.json"
+FORMAT_NAME = "gfl2-langpackage-by-text-1"
+
+
+def fingerprint(text: str) -> str:
+    """Translation key for a text: first 16 hex chars (64 bits) of its UTF-8 SHA-256."""
+    return hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
 
 
 class TranslationMemory:
@@ -63,7 +70,8 @@ class TranslationMemory:
                     source_type TEXT DEFAULT 'matched',
                     updated_at TEXT,
                     is_verified INTEGER DEFAULT 1,
-                    created_at TEXT
+                    created_at TEXT,
+                    fingerprint TEXT
                 );
             """)
             conn.execute("CREATE INDEX IF NOT EXISTS idx_source_cn ON translations (source_cn);")
@@ -73,8 +81,11 @@ class TranslationMemory:
             if "created_at" not in cols:
                 conn.execute("ALTER TABLE translations ADD COLUMN created_at TEXT;")
                 conn.execute("UPDATE translations SET created_at = COALESCE(updated_at, datetime('now')) WHERE created_at IS NULL;")
+            if "fingerprint" not in cols:
+                conn.execute("ALTER TABLE translations ADD COLUMN fingerprint TEXT;")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_is_verified ON translations (is_verified);")
             conn.execute("CREATE INDEX IF NOT EXISTS idx_translations_created_at ON translations (created_at);")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_translations_fingerprint ON translations (fingerprint);")
             conn.commit()
 
     def count(self) -> int:
@@ -91,11 +102,25 @@ class TranslationMemory:
             row = cur.fetchone()
             return row[0] if row else None
 
+    def get_translation_by_fingerprint(self, fp: str) -> str | None:
+        with self.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("SELECT target_en FROM translations WHERE fingerprint = ?;", (fp,))
+            row = cur.fetchone()
+            return row[0] if row else None
+
     def get_all_dict(self) -> dict[str, str]:
-        """Loads all translation pairs into memory for ultra-fast lookup."""
+        """Loads all translation pairs into memory for ultra-fast lookup (keyed by Chinese text)."""
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("SELECT source_cn, target_en FROM translations;")
+            return dict(cur.fetchall())
+
+    def get_all_by_fingerprint(self) -> dict[str, str]:
+        """Loads all translation pairs into memory indexed by SHA-256 fingerprint."""
+        with self.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("SELECT fingerprint, target_en FROM translations WHERE fingerprint IS NOT NULL;")
             return dict(cur.fetchall())
 
     def upsert_bulk(self, entries: list[tuple]) -> int:
@@ -123,19 +148,21 @@ class TranslationMemory:
                 stype = item[3] if len(item) > 3 else "matched"
                 verified = 1
                 created = now_str
-            formatted.append((cn, en, freq, stype, now_str, verified, created))
+            fp = fingerprint(cn)
+            formatted.append((cn, en, freq, stype, now_str, verified, created, fp))
 
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.executemany("""
-                INSERT INTO translations (source_cn, target_en, frequency, source_type, updated_at, is_verified, created_at)
-                VALUES (?, ?, ?, ?, ?, ?, ?)
+                INSERT INTO translations (source_cn, target_en, frequency, source_type, updated_at, is_verified, created_at, fingerprint)
+                VALUES (?, ?, ?, ?, ?, ?, ?, ?)
                 ON CONFLICT(source_cn) DO UPDATE SET
                     target_en = excluded.target_en,
                     frequency = translations.frequency + excluded.frequency,
                     source_type = excluded.source_type,
                     updated_at = excluded.updated_at,
-                    is_verified = excluded.is_verified
+                    is_verified = excluded.is_verified,
+                    fingerprint = excluded.fingerprint
                 WHERE excluded.source_type != 'auto' OR translations.source_type = 'auto';
             """, formatted)
             conn.commit()
@@ -229,10 +256,60 @@ def batch_auto_translate(
 # Core Workflow Functions
 # ==============================================================================
 
+def build_database_from_tables(
+    cn_path: Path, en_path: Path, db_path: Path
+) -> int:
+    """Extracts Chinese -> English translation pairs directly from matching .bytes tables by row ID."""
+    print(f"\n--- Building Translation Database Directly from Tables ---")
+    print(f"Chinese table : {cn_path}")
+    print(f"English table : {en_path}")
+    print(f"Target DB     : {db_path}")
+
+    import langpackage_export
+    table_cn = langpackage_export.load_table(cn_path)
+    table_en = langpackage_export.load_table(en_path)
+
+    en_by_id = {row.id: row.text for row in table_en.rows}
+    counter_map: dict[str, Counter[str]] = defaultdict(Counter)
+    conflicts = 0
+
+    for row in table_cn.rows:
+        cn = row.text
+        if not cn:
+            continue
+        en = en_by_id.get(row.id, "")
+        if not en:
+            continue
+        if CJK_PATTERN.search(cn) or (en != cn):
+            counter_map[cn][en] += 1
+
+    entries_to_save: list[tuple[str, str, int, str]] = []
+    for cn, counts in counter_map.items():
+        if len(counts) > 1:
+            conflicts += 1
+        best_en, freq = counts.most_common(1)[0]
+        entries_to_save.append((cn, best_en, freq, "matched"))
+
+    print(f"Extracted {len(entries_to_save):,} unique Chinese strings from tables.")
+    if conflicts > 0:
+        print(f"  Note: Resolved {conflicts:,} strings with multiple English variations (used most frequent translation).")
+
+    db = TranslationMemory(db_path)
+    print("Writing to database...")
+    db.upsert_bulk(entries_to_save)
+    total_db_entries = db.count()
+    print(f"[Success] Database updated! Total stored translations in memory: {total_db_entries:,}.\n")
+    return len(entries_to_save)
+
+
 def build_database_from_files(
     cn_path: Path, en_path: Path, db_path: Path, update: bool = False
 ) -> int:
-    """Extracts Chinese -> English translation pairs from baseline JSON files and stores in SQLite."""
+    """Extracts Chinese -> English translation pairs from baseline files (.bytes or .json) and stores in SQLite."""
+    # If both inputs are binary .bytes files, extract directly from tables by row ID
+    if cn_path.suffix.lower() == ".bytes" and en_path.suffix.lower() == ".bytes":
+        return build_database_from_tables(cn_path, en_path, db_path)
+
     print(f"\n--- Building Translation Database ---")
     print(f"Chinese baseline : {cn_path}")
     print(f"English baseline : {en_path}")
@@ -246,9 +323,11 @@ def build_database_from_files(
     print("Loading JSON files (this may take a few seconds for large tables)...")
     t0 = time.time()
     with cn_path.open("r", encoding="utf-8") as f:
-        cn_texts = json.load(f).get("texts", {})
+        cn_doc = json.load(f)
+        cn_texts = cn_doc.get("texts", cn_doc.get("translations", cn_doc))
     with en_path.open("r", encoding="utf-8") as f:
-        en_texts = json.load(f).get("texts", {})
+        en_doc = json.load(f)
+        en_texts = en_doc.get("texts", en_doc.get("translations", en_doc))
 
     print(f"Loaded {len(cn_texts):,} CN entries and {len(en_texts):,} EN entries in {time.time() - t0:.2f}s.")
 
@@ -260,7 +339,6 @@ def build_database_from_files(
     for key, cn in cn_texts.items():
         if not cn:
             continue
-        # Only store entries that contain Chinese characters, or where EN is distinct from CN
         en = en_texts.get(key, "")
         if not en:
             continue
@@ -397,7 +475,10 @@ def sync_and_translate(
             "translations": {cn: (translated_map.get(cn) or memory.get(cn) or "") for cn in texts_dict.keys()}
         }
     else:
-        out_doc = {"texts": new_en_texts}
+        out_doc = {
+            "format": FORMAT_NAME,
+            "texts": new_en_texts
+        }
 
     with output_en_path.open("w", encoding="utf-8", newline="\n") as f:
         json.dump(out_doc, f, ensure_ascii=False, indent=2)
@@ -416,6 +497,8 @@ def sync_and_translate(
                 if v in translated_map:
                     std_texts[k] = translated_map[v]
                     updated_count += 1
+            if "format" not in std_doc:
+                std_doc["format"] = FORMAT_NAME
             with std_eng_path.open("w", encoding="utf-8", newline="\n") as f:
                 json.dump(std_doc, f, ensure_ascii=False, indent=2)
                 f.write("\n")
@@ -487,6 +570,7 @@ def import_translated_file(
     and updates translations_eng.json in place.
     
     Applies Lore Glossary rules to newly imported strings before saving to database.
+    Supports both Chinese-keyed and SHA-256 fingerprint-keyed JSON files (Discord community format).
     """
     print(f"\n--- Importing Translations ---")
     print(f"Source   : {translated_input}")
@@ -523,9 +607,23 @@ def import_translated_file(
             else:
                 target_dict = data
 
-        for cn, en in target_dict.items():
-            if cn.startswith("_"):  # Skip prompt or info keys
+        # Check if keys are 16-hex fingerprints (from Discord community format)
+        fp_keys = [str(k) for k in target_dict.keys() if re.fullmatch(r"[0-9a-f]{16}", str(k))]
+        fp_to_cn = {}
+        if fp_keys:
+            with sqlite3.connect(db_path) as conn:
+                cur = conn.cursor()
+                for i in range(0, len(fp_keys), 900):
+                    batch_fps = fp_keys[i:i+900]
+                    placeholders = ",".join("?" * len(batch_fps))
+                    cur.execute(f"SELECT fingerprint, source_cn FROM translations WHERE fingerprint IN ({placeholders});", batch_fps)
+                    for fp, cn in cur.fetchall():
+                        fp_to_cn[fp] = cn
+
+        for key, en in target_dict.items():
+            if str(key).startswith("_"):  # Skip prompt or info keys
                 continue
+            cn = fp_to_cn.get(str(key), key)
             if isinstance(en, str) and cn and en.strip() and cn != en:
                 if cn not in seen_cn:
                     raw_pairs.append((cn, en.strip()))
@@ -591,6 +689,8 @@ def import_translated_file(
             elif v in mapping:
                 texts[k] = mapping[v]
                 updated += 1
+        if "format" not in en_doc:
+            en_doc["format"] = FORMAT_NAME
         with target_en_json.open("w", encoding="utf-8", newline="\n") as f:
             json.dump(en_doc, f, ensure_ascii=False, indent=2)
             f.write("\n")
